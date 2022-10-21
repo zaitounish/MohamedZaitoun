@@ -17,14 +17,14 @@
 
 /*Start logo*/
 .navbar-light .navbar-brand {
-    color: #305252;
+    color: #52796F;
     font-weight: 700;
     font-size: 1.4rem;
 }
 
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:hover {
-    color: #488286;
+    color: #52796F;
 }
 
 /*End logo*/
@@ -36,7 +36,9 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #305252;
+    color: #3b675c;
+    font-weight: 600;
+    font-size: 1.005rem;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
