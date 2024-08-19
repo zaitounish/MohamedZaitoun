@@ -167,6 +167,106 @@
 }
 
 /*End Services*/
+/* Start Education & Certification Section */
+#EducationAndCertification {
+  background-color: #f0f8f8; /* Soft background color to distinguish the section */
+  padding: 50px 0; /* Add padding for vertical spacing */
+}
+
+.education-container,
+.certification-container {
+  margin-bottom: 30px; /* Space between education and certification entries */
+  display: flex;
+  align-items: center; /* Align items in the center */
+}
+
+.institution-logo {
+  width: 80px; /* or desired width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* This makes the image circular */
+  overflow: hidden; /* Ensures that any overflow is hidden */
+  border: 2px solid #488286; /* Optional: Add a border for visual effect */
+}
+
+.education-container h3,
+.certification-container h3 {
+  color: #305252; /* Match with your main color palette */
+  font-size: 1.5rem; /* Increase font size for visibility */
+  margin-bottom: 5px; /* Spacing below heading */
+}
+
+.education-container p,
+.certification-container p {
+  color: #555; /* Darker gray color for less emphasis */
+  font-size: 1rem; /* Standard font size for details */
+  margin-bottom: 0; /* Reset margin for cleanliness */
+}
+
+/* Add a border or a visual indicator */
+.row.education-container,
+.row.certification-container {
+  border-left: 5px solid #488286; /* Left border for emphasis */
+  padding-left: 15px; /* Ensure padding for text */
+  background-color: #ffffff; /* White background for each row */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  padding: 15px; /* Padding inside each entry */
+  transition: box-shadow 0.3s ease; /* Add transition effect */
+}
+
+.education-container:hover,
+.certification-container:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow on hover for depth */
+}
+
+/* End Education & Certification Section */
+
+/* Start Work Experience Section */
+.ctitle {
+  margin-bottom: 40px; /* Add space below the section titles */
+}
+
+#WorkExperience {
+  background-color: #f0f8f8; /* Match with Education section background */
+  padding: 50px 0; /* Consistent padding */
+}
+
+.experience-container {
+  margin-bottom: 30px; /* Space between individual experiences */
+  display: flex;
+  align-items: center; /* Align logo and text */
+  border-left: 5px solid #488286; /* Left border similar to Education section */
+  padding-left: 15px; /* Inner padding for text */
+  background-color: #ffffff; /* White background for each entry */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Padding inside each entry */
+  transition: box-shadow 0.3s ease; /* Transition effect */
+}
+
+.experience-container:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+
+.company-logo {
+  width: 80px; /* Consistent size for logos */
+  height: auto;
+  margin-right: 20px; /* Space between logo and title */
+}
+
+.experience-container h3 {
+  color: #305252; /* Matching color palette */
+  font-size: 1.5rem; /* Increased font size for visibility */
+  margin-bottom: 5px; /* Spacing below job titles */
+}
+
+.experience-container p {
+  color: #555; /* Darker gray for details */
+  font-size: 1rem; /* Standard font size for job details */
+  margin-bottom: 0; /* Reset margin for cleanliness */
+}
+
+/* End Work Experience Section */
+
+/* End Work Experience Section */
 
 /*Start projects*/
 .section3 {
