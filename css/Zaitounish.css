@@ -60,11 +60,8 @@
 }
 
 #MainCover {
-  /* border-radius: 30% 70% 29% 71% / 51% 30% 70% 49%; */
   /* background-attachment: fixed; */
   transform: scale(0.7);
-  /* background-size: 40%; */
-  /* background-position: center; */
 }
 
 .attattribution {
