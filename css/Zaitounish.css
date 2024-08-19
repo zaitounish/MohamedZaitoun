@@ -6,43 +6,45 @@
 /*Start Header*/
 
 .navbar-toggler {
-  background-color: #b7d5d4;
+  background-color: #ede8f5;
 }
 
 .navbar {
-  background-color: #ffffff;
+  background-color: #f6f8fa;
   padding: 10px 5%;
 }
 
 /*Start logo*/
 .navbar-light .navbar-brand {
-  color: #52796f;
+  color: #3d52a0;
   font-weight: 700;
   font-size: 1.4rem;
 }
 
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:hover {
-  color: #52796f;
+  color: #3d52a0;
 }
 
 /*End logo*/
 
 /*Start Links*/
+p,
 .nav-link {
+  color: #8697c4;
   font-size: 1rem;
   font-weight: 500;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #3b675c;
+  color: #3d52a0;
   font-weight: 600;
   font-size: 1.005rem;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #488286;
+  color: #8697c4;
 }
 
 /*End Links*/
@@ -50,8 +52,8 @@
 
 /*Start Home*/
 .section1 {
-  background-color: #305252;
-  color: #ffffff;
+  background-color: #ede8f5;
+  color: #3d52a0;
   padding-bottom: 15px;
   align-content: center;
   justify-content: center;
@@ -89,8 +91,8 @@
 
 /* Start button*/
 #ViewMyWork {
-  background-color: #ffffff;
-  color: #488286;
+  background-color: #3d52a0;
+  color: #ffffff;
   border-radius: 15px;
   font-size: 0.95rem;
   padding: 0.9375em 2.1875em;
@@ -100,8 +102,9 @@
   margin-top: 15px;
 }
 
-#ViewMyWork:hover {
-  background-color: #488286;
+#ViewMyWork:hover,
+.btn-card:hover {
+  background-color: #7091e6;
   color: #ffffff;
   transform: scale(1.1);
 }
@@ -111,7 +114,7 @@
 /* Satrt Icons*/
 .social-icons a {
   padding-right: 20px;
-  color: #ffffff;
+  color: #3d52a0;
 }
 
 .fa-github {
@@ -125,6 +128,8 @@
 .section2 {
   padding-top: 65px;
   padding-bottom: 75px;
+  background-color: #adbbda;
+  color: #3d52a0;
 }
 .phone {
   padding-left: 50px; /* Adjust the value as needed */
@@ -142,7 +147,7 @@
 }
 
 .cards {
-  background-color: #fff;
+  background-color: #f6f8fa;
   box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
   border-radius: 10px;
   padding: 25px;
@@ -155,13 +160,13 @@
 }
 
 .cards .icon {
-  color: #305252;
+  color: #3d52a0;
   font-size: 6em;
   text-align: center;
 }
 
 .info h3 {
-  color: #488286;
+  color: #3d52a0;
   font-size: 1.2em;
   font-weight: 700;
 }
@@ -169,9 +174,10 @@
 /*End Services*/
 
 /* Start Skills Slide Section */
-#SkillsSlide {
-  background-color: #f0f8f8; /* Same background color as other sections */
-  padding: 50px 0; /* Consistent padding */
+#Skills {
+  background-color: #adbbda; /* Same background color as other sections */
+  padding: 50px 0;
+  color: #fff; /* Consistent padding */
 }
 
 .skills-container {
@@ -179,9 +185,9 @@
   margin-bottom: 40px; /* Spacing above the skills container */
   padding: 20px; /* Padding inside the skills container */
   border-radius: 10px; /* Rounded corners */
-  background-color: #ffffff; /* White background for visibility */
+  background-color: #f6f8fa; /* White background for visibility */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Initial shadow */
-  border-left: 5px solid #488286; /* Matching left border for consistency */
+  border-left: 5px solid #3d52a0; /* Matching left border for consistency */
 
   transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
@@ -189,7 +195,7 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover for depth */
 }
 .skills-container h3 {
-  color: #305252; /* Matching color palette */
+  color: #3d52a0; /* Matching color palette */
   font-size: 1.5rem; /* Heading for content */
   margin-bottom: 10px; /* Spacing below content heading */
 }
@@ -197,7 +203,7 @@
 .skills-list {
   list-style-type: disc; /* Bulleted list style */
   padding-left: 20px; /* Indent for bullets */
-  color: #555; /* Dark gray for readability */
+  color: #333; /* Dark gray for readability */
 }
 
 .skills-list li {
@@ -205,23 +211,32 @@
 }
 
 .skills-purpose {
-  color: #305252; /* Match purpose paragraph color */
+  color: #3d52a0; /* Match purpose paragraph color */
   font-size: 1rem; /* Standard font size for the purpose */
   margin-top: 40px; /* Spacing above the purpose statement */
 }
 
 /* End Skills Slide Section */
-
 /* Start Education & Certification Section */
+
+#Education {
+  background-color: #ede8f5; /* Setting the entire background color for the section */
+  padding: 50px 0; /* Add padding for vertical spacing */
+}
 
 .shadow-effect {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Provides a nice shadow effect */
   border-radius: 10px; /* Rounded corners for softer appearance */
   transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
-#EducationAndCertification {
-  background-color: #f0f8f8; /* Soft background color to distinguish the section */
-  padding: 50px 0; /* Add padding for vertical spacing */
+.education-container,
+.certification-container,
+.experience-container {
+  /* Added experience-container here to ensure consistent background */
+  background-color: #ede8f5; /* Set background color for entries */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px; /* Space between items */
+  padding: 15px; /* Inner padding */
 }
 
 .education-container,
@@ -237,56 +252,36 @@
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* This makes the image circular */
   overflow: hidden; /* Ensures that any overflow is hidden */
-  border: 2px solid #488286; /* Optional: Add a border for visual effect */
+  border: 2px solid #3d52a0; /* New: Border for visual effect with primary color */
 }
 
 .education-container h3,
 .certification-container h3 {
-  color: #305252; /* Match with your main color palette */
+  color: #3d52a0; /* New: Use primary color for headings */
   font-size: 1.5rem; /* Increase font size for visibility */
   margin-bottom: 5px; /* Spacing below heading */
 }
 
 .education-container p,
 .certification-container p {
-  color: #555; /* Darker gray color for less emphasis */
+  color: #555; /* Keep dark gray color for less emphasis */
   font-size: 1rem; /* Standard font size for details */
   margin-bottom: 0; /* Reset margin for cleanliness */
 }
+
 .container {
   margin-top: 20px; /* Margin on top for spacing */
 }
+
 /* Add a border or a visual indicator */
 .row.education-container,
 .row.certification-container {
-  border-left: 5px solid #488286; /* Left border for emphasis */
+  border-left: 5px solid #7091e6; /* New: Lighter blue for left border for emphasis */
   padding-left: 15px; /* Ensure padding for text */
-  background-color: #ffffff; /* White background for each row */
+  background-color: #f6f8fa; /* Changed back to #EDE8F5 as per your request */
   border-radius: 5px; /* Rounded corners for a softer look */
   padding: 15px; /* Padding inside each entry */
   transition: box-shadow 0.3s ease; /* Add transition effect */
-}
-
-.education-container:hover,
-.certification-container:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow on hover for depth */
-}
-
-/* Utility Styles for Shadows */
-.shadow-effect {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Provides a nice shadow effect */
-  border-radius: 10px; /* Rounded corners for softer appearance */
-  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Start Education & Certification Section */
-.education-container,
-.certification-container,
-.experience-container {
-  background-color: #ffffff; /* White background for each section */
-  border-radius: 10px; /* Rounded corners */
-  margin-bottom: 20px; /* Space between items */
-  padding: 15px; /* Inner padding */
 }
 
 .education-container:hover,
@@ -302,8 +297,8 @@
   margin-bottom: 40px; /* Add space below the section titles */
 }
 
-#WorkExperience {
-  background-color: #f0f8f8; /* Match with Education section background */
+#Work-Experience {
+  background-color: #ede8f5; /* Match with Education section background */
   padding: 50px 0;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Consistent padding */
 }
@@ -312,9 +307,9 @@
   margin-bottom: 30px; /* Space between individual experiences */
   display: flex;
   align-items: center; /* Align logo and text */
-  border-left: 5px solid #488286; /* Left border similar to Education section */
+  border-left: 5px solid #3d52a0; /* Left border similar to Education section */
   padding-left: 15px; /* Inner padding for text */
-  background-color: #ffffff; /* White background for each entry */
+  background-color: #f6f8fa; /* White background for each entry */
   border-radius: 5px; /* Rounded corners */
   padding: 15px; /* Padding inside each entry */
   transition: box-shadow 0.3s ease;
@@ -332,13 +327,13 @@
 }
 
 .experience-container h3 {
-  color: #305252; /* Matching color palette */
+  color: #3d52a0; /* Matching color palette */
   font-size: 1.5rem; /* Increased font size for visibility */
   margin-bottom: 5px; /* Spacing below job titles */
 }
 
 .experience-container p {
-  color: #555; /* Darker gray for details */
+  color: #333; /* Darker gray for details */
   font-size: 1rem; /* Standard font size for job details */
   margin-bottom: 0; /* Reset margin for cleanliness */
 }
@@ -350,17 +345,17 @@
 /*Start projects*/
 .section3 {
   padding-top: 65px;
-  background-color: #305252;
+  background-color: #adbbda;
 }
 
 .ptitle {
-  color: #ffffff;
+  color: #fff;
   font-weight: 700;
   font-size: 2rem;
 }
 
 .btn-card {
-  background-color: #488286;
+  background-color: #3d52a0;
   color: #ffffff;
   border-radius: 15px;
   font-size: 0.95rem;
@@ -371,23 +366,31 @@
   transition: 0.55s ease;
 }
 
+.card-title {
+  color: #3d52a0;
+  font-weight: 700;
+}
+
+/* .card-text {
+
+} */
 .btn-card:hover {
-  background-color: #d5e8e8;
-  color: #488286;
+  background-color: #7091e6;
+  color: #fff;
   transform: scale(1.1);
 }
 /*End projects*/
 
 /* Start Testimonials Slide Section */
-#TestimonialsSlide {
-  background-color: #f0f8f8; /* Background color for consistency */
+#Feedback {
+  background-color: #ede8f5; /* Background color for consistency */
   padding: 50px 0; /* Consistent top and bottom padding */
 }
 
 .testimonial-container {
   margin-bottom: 30px; /* Spacing between testimonials */
-  background-color: #ffffff; /* White background for quote containers */
-  border-left: 5px solid #488286; /* Left border for visual styling */
+  background-color: #f6f8fa; /* White background for quote containers */
+  border-left: 5px solid #3d52a0; /* Left border for visual styling */
   padding: 15px 20px; /* Inner padding for the testimonial container */
   border-radius: 5px; /* Rounded corners for a softer look */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -397,7 +400,7 @@
   transition: transform 0.3s; /* Shadow effect on hover */
 }
 .testimonial-container h3 {
-  color: #305252; /* Color for name and title */
+  color: #3d52a0; /* Color for name and title */
   font-size: 1.5rem; /* Increased font size for visibility */
   margin-bottom: 10px; /* Space below the name/title */
 }
@@ -411,13 +414,13 @@
 /* End Testimonials Slide Section */
 
 /* Start Contact Slide Section */
-#ContactSlide {
-  background-color: #f0f8f8; /* Light background for consistency */
-  padding: 50px 0; /* Consistent top and bottom padding */
+#Contact {
+  background-color: #adbbda; /* Light background for consistency */
+  padding: 50px 0;
 }
 
 .ctitle {
-  color: #305252; /* Title color consistent with the theme */
+  /* color: #3d52a0;  */
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 30px; /* Spacing below the title */
@@ -432,7 +435,7 @@
 }
 
 .contact-item {
-  background-color: #ffffff; /* White background for each item */
+  background-color: #f6f8fa; /* White background for each item */
   border: 1px solid #d5d5d5; /* Light gray border */
   border-radius: 10px; /* Rounded corners */
   padding: 15px; /* Padding inside the item */
@@ -449,7 +452,7 @@
 }
 
 .contact-item i {
-  color: #488286; /* Teal color for icons */
+  color: #3d52a0; /* Teal color for icons */
   margin-right: 10px; /* Space between icon and text */
   font-size: 1.5em; /* Increase icon size */
 }
@@ -457,11 +460,11 @@
 .contact-item p {
   margin: 0; /* Reset margin for paragraphs */
   font-size: 1.1rem; /* Standard font size for contact info */
-  color: #305252; /* Standard text color */
+  color: #3d52a0; /* Standard text color */
 }
 
 .contact-item a {
-  color: #488286; /* Teal color for links */
+  color: #3d52a0; /* Teal color for links */
   text-decoration: none; /* Remove underline from links */
 }
 
@@ -470,32 +473,33 @@
 }
 
 .optional {
-  color: #488286; /* Optional text faded color */
-}
-
-.purpose {
-  margin-top: 20px; /* Space above the purpose statement */
-  text-align: center; /* Center align purpose statement */
-  color: #555; /* Dark gray for readability */
-  font-size: 1rem; /* Standard font size */
+  color: #3d52a0; /* Optional text faded color */
 }
 
 /* End Contact Slide Section */
-
+.whitetitle {
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
 /*Start Footer*/
 
 .footer {
-  background-color: #305252;
-  color: #fff;
+  background-color: #ede8f5;
+  color: #adbbda;
   padding: 2em;
   padding-bottom: 0.5em;
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   font-size: 0.8rem;
+  border-top: 2px solid #3d52a0;
 }
 
+h1,
+h2,
+h3,
 .footer-title {
+  color: #3d52a0;
   font-size: 1.3em;
   font-weight: 600;
 }
