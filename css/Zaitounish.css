@@ -167,6 +167,46 @@
 }
 
 /*End Services*/
+
+/* Start Skills Slide Section */
+#SkillsSlide {
+  background-color: #f0f8f8; /* Same background color as other sections */
+  padding: 50px 0; /* Consistent padding */
+}
+
+.skills-container {
+  margin-bottom: 30px; /* Space within the content */
+  border-left: 5px solid #488286; /* Matching left border for consistency */
+  padding-left: 15px; /* Inner padding for text */
+  background-color: #ffffff; /* White background for the content box */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Padding inside the content box */
+}
+
+.skills-container h3 {
+  color: #305252; /* Matching color palette */
+  font-size: 1.5rem; /* Heading for content */
+  margin-bottom: 10px; /* Spacing below content heading */
+}
+
+.skills-list {
+  list-style-type: disc; /* Bulleted list style */
+  padding-left: 20px; /* Indent for bullets */
+  color: #555; /* Dark gray for readability */
+}
+
+.skills-list li {
+  margin-bottom: 5px; /* Space between each skill item */
+}
+
+.skills-purpose {
+  color: #305252; /* Match purpose paragraph color */
+  font-size: 1rem; /* Standard font size for the purpose */
+  margin-top: 20px; /* Spacing above the purpose statement */
+}
+
+/* End Skills Slide Section */
+
 /* Start Education & Certification Section */
 #EducationAndCertification {
   background-color: #f0f8f8; /* Soft background color to distinguish the section */
@@ -298,6 +338,35 @@
   transform: scale(1.1);
 }
 /*End projects*/
+
+/* Start Testimonials Slide Section */
+#TestimonialsSlide {
+  background-color: #f0f8f8; /* Background color for consistency */
+  padding: 50px 0; /* Consistent top and bottom padding */
+}
+
+.testimonial-container {
+  margin-bottom: 30px; /* Spacing between testimonials */
+  background-color: #ffffff; /* White background for quote containers */
+  border-left: 5px solid #488286; /* Left border for visual styling */
+  padding: 15px 20px; /* Inner padding for the testimonial container */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.testimonial-container h3 {
+  color: #305252; /* Color for name and title */
+  font-size: 1.5rem; /* Increased font size for visibility */
+  margin-bottom: 10px; /* Space below the name/title */
+}
+
+.testimonial-quote {
+  font-style: italic; /* Italic style for quotes */
+  color: #555; /* Dark gray for improved readability */
+  margin-bottom: 0; /* No margin below quote for a clean look */
+}
+
+/* End Testimonials Slide Section */
 
 /*Start Contact*/
 .section4 {
