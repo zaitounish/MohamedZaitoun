@@ -126,7 +126,11 @@
   padding-top: 65px;
   padding-bottom: 75px;
 }
-
+.phone {
+  padding-left: 50px; /* Adjust the value as needed */
+  padding-right: 50px; /* Adjust the value as needed */
+  text-align: center; /* Center the text within the padded area */
+}
 .stitle {
   color: #305252;
   font-weight: 700;
