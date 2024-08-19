@@ -1,262 +1,259 @@
 * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /*Start Header*/
 
 .navbar-toggler {
-    background-color: #B7D5D4;
-
+  background-color: #b7d5d4;
 }
 
 .navbar {
-    background-color: #ffffff;
-    padding: 10px 5%;
+  background-color: #ffffff;
+  padding: 10px 5%;
 }
 
 /*Start logo*/
 .navbar-light .navbar-brand {
-    color: #52796F;
-    font-weight: 700;
-    font-size: 1.4rem;
+  color: #52796f;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:hover {
-    color: #52796F;
+  color: #52796f;
 }
 
 /*End logo*/
 
 /*Start Links*/
 .nav-link {
-    font-size: 1rem;
-    font-weight: 500;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #3b675c;
-    font-weight: 600;
-    font-size: 1.005rem;
+  color: #3b675c;
+  font-weight: 600;
+  font-size: 1.005rem;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #488286;
+  color: #488286;
 }
 
 /*End Links*/
 /*End Header*/
 
-
 /*Start Home*/
 .section1 {
-    background-color: #305252;
-    color: #ffffff;
-    padding-bottom: 15px;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    padding-top: 75px;
+  background-color: #305252;
+  color: #ffffff;
+  padding-bottom: 15px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 75px;
 }
 
 #MainCover {
-    border-radius: 30% 70% 29% 71% / 51% 30% 70% 49%;
-    background-attachment: fixed;
+  /* border-radius: 30% 70% 29% 71% / 51% 30% 70% 49%; */
+  /* background-attachment: fixed; */
+  transform: scale(0.7);
+  /* background-size: 40%; */
+  /* background-position: center; */
 }
 
 .attattribution {
-    font-size: 0.3rem;
+  font-size: 0.3rem;
 }
 
 /*Start Paragraph*/
 #Hello {
-    font-weight: 400;
-    font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 #Junior {
-    font-size: 2.7rem;
-    font-weight: 500;
-    margin-top: 15px;
+  font-size: 2.7rem;
+  font-weight: 500;
+  margin-top: 15px;
 }
 
 #analyze {
-    font-size: 1.3rem;
-    margin-top: -10px;
-
+  font-size: 1.3rem;
+  margin-top: -10px;
 }
 
 /*End Paragraph*/
 
 /* Start button*/
 #ViewMyWork {
-    background-color: #ffffff;
-    color: #488286;
-    border-radius: 15px;
-    font-size: 0.95rem;
-    padding: 0.9375em 2.1875em;
-    margin-bottom: 20px;
-    font-weight: 700;
-    transition: 0.55s ease;
-    margin-top: 15px;
+  background-color: #ffffff;
+  color: #488286;
+  border-radius: 15px;
+  font-size: 0.95rem;
+  padding: 0.9375em 2.1875em;
+  margin-bottom: 20px;
+  font-weight: 700;
+  transition: 0.55s ease;
+  margin-top: 15px;
 }
 
 #ViewMyWork:hover {
-    background-color: #488286;
-    color: #ffffff;
-    transform: scale(1.1);
+  background-color: #488286;
+  color: #ffffff;
+  transform: scale(1.1);
 }
 
 /* End button*/
 
 /* Satrt Icons*/
 .social-icons a {
-    padding-right: 20px;
-    color: #ffffff;
+  padding-right: 20px;
+  color: #ffffff;
 }
 
-
-
 .fa-github {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 /* End Icons*/
 /*End Home*/
 
-
 /*Start Services*/
 .section2 {
-    padding-top: 65px;
-    padding-bottom: 75px;
+  padding-top: 65px;
+  padding-bottom: 75px;
 }
 
 .stitle {
-    color: #305252;
-    font-weight: 700;
-    font-size: 2rem;
+  color: #305252;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .all-cards {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .cards {
-    background-color: #fff;
-    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-    border-radius: 10px;
-    padding: 25px;
-    margin: 15px;
-    transition: 0.7s ease;
+  background-color: #fff;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+  transition: 0.7s ease;
 }
 
 .cards:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .cards .icon {
-    color: #305252;
-    font-size: 6em;
-    text-align: center;
+  color: #305252;
+  font-size: 6em;
+  text-align: center;
 }
 
 .info h3 {
-    color: #488286;
-    font-size: 1.2em;
-    font-weight: 700;
-
+  color: #488286;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 /*End Services*/
 
 /*Start projects*/
 .section3 {
-    padding-top: 65px;
-    background-color: #305252;
+  padding-top: 65px;
+  background-color: #305252;
 }
 
 .ptitle {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .btn-card {
-    background-color: #488286;
-    color: #ffffff;
-    border-radius: 15px;
-    font-size: 0.95rem;
-    padding: 0.9375em 2.1875em;
-    margin-bottom: 20px;
-    font-weight: 700;
-    margin-top: 15px;
-    transition: 0.55s ease;
+  background-color: #488286;
+  color: #ffffff;
+  border-radius: 15px;
+  font-size: 0.95rem;
+  padding: 0.9375em 2.1875em;
+  margin-bottom: 20px;
+  font-weight: 700;
+  margin-top: 15px;
+  transition: 0.55s ease;
 }
 
 .btn-card:hover {
-    background-color: #d5e8e8;
-    color: #488286;
-    transform: scale(1.1);
+  background-color: #d5e8e8;
+  color: #488286;
+  transform: scale(1.1);
 }
 /*End projects*/
 
-
 /*Start Contact*/
-.section4{
-    padding-top: 65px;
+.section4 {
+  padding-top: 65px;
 }
 
-.ctitle{
-    color: #305252;
-    font-weight: 700;
-    font-size: 2rem;
+.ctitle {
+  color: #305252;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
-.mail{
-    font-size: 1.4rem;
+.mail {
+  font-size: 1.4rem;
+}
+
+.phone {
+  padding-left: 50px; /* Adjust the value as needed */
+  padding-right: 50px; /* Adjust the value as needed */
+  text-align: center;
+  font-size: 1.4rem;
+  /* Center the text within the padded area */
 }
 
 /*End Contact*/
 /*Start Footer*/
 
 .footer {
-    background-color: #305252;
-    color: #fff;
-    padding: 2em;
-    padding-bottom: 0.5em;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
-    font-size: 0.8rem;
+  background-color: #305252;
+  color: #fff;
+  padding: 2em;
+  padding-bottom: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  font-size: 0.8rem;
 }
 
 .footer-title {
-    font-size: 1.3em;
-    font-weight: 600;
+  font-size: 1.3em;
+  font-weight: 600;
 }
 
-
-.footer .social-icons a{
-    font-size: 1.3em;
-    padding: 0 12px 0 0;
+.footer .social-icons a {
+  font-size: 1.3em;
+  padding: 0 12px 0 0;
 }
 
 /*End Footer*/
 @media (max-width: 577px) {
-    .mainText {
-        padding-left: 5%;
-    }
-    
+  .mainText {
+    padding-left: 5%;
+  }
 }
 
 @media (max-width: 473px) {
-    #ViewMyWork {
-        padding: 0.7em 1.9em;
-    }
-    
+  #ViewMyWork {
+    padding: 0.7em 1.9em;
+  }
 }
-
-
-    
