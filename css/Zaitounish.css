@@ -175,14 +175,19 @@
 }
 
 .skills-container {
-  margin-bottom: 30px; /* Space within the content */
+  margin-top: 20px;
+  margin-bottom: 40px; /* Spacing above the skills container */
+  padding: 20px; /* Padding inside the skills container */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #ffffff; /* White background for visibility */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Initial shadow */
   border-left: 5px solid #488286; /* Matching left border for consistency */
-  padding-left: 15px; /* Inner padding for text */
-  background-color: #ffffff; /* White background for the content box */
-  border-radius: 5px; /* Rounded corners */
-  padding: 15px; /* Padding inside the content box */
-}
 
+  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+.skills-container:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover for depth */
+}
 .skills-container h3 {
   color: #305252; /* Matching color palette */
   font-size: 1.5rem; /* Heading for content */
@@ -202,12 +207,18 @@
 .skills-purpose {
   color: #305252; /* Match purpose paragraph color */
   font-size: 1rem; /* Standard font size for the purpose */
-  margin-top: 20px; /* Spacing above the purpose statement */
+  margin-top: 40px; /* Spacing above the purpose statement */
 }
 
 /* End Skills Slide Section */
 
 /* Start Education & Certification Section */
+
+.shadow-effect {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Provides a nice shadow effect */
+  border-radius: 10px; /* Rounded corners for softer appearance */
+  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
 #EducationAndCertification {
   background-color: #f0f8f8; /* Soft background color to distinguish the section */
   padding: 50px 0; /* Add padding for vertical spacing */
@@ -217,7 +228,8 @@
 .certification-container {
   margin-bottom: 30px; /* Space between education and certification entries */
   display: flex;
-  align-items: center; /* Align items in the center */
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Align items in the center */
 }
 
 .institution-logo {
@@ -241,7 +253,9 @@
   font-size: 1rem; /* Standard font size for details */
   margin-bottom: 0; /* Reset margin for cleanliness */
 }
-
+.container {
+  margin-top: 20px; /* Margin on top for spacing */
+}
 /* Add a border or a visual indicator */
 .row.education-container,
 .row.certification-container {
@@ -258,6 +272,29 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow on hover for depth */
 }
 
+/* Utility Styles for Shadows */
+.shadow-effect {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Provides a nice shadow effect */
+  border-radius: 10px; /* Rounded corners for softer appearance */
+  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Start Education & Certification Section */
+.education-container,
+.certification-container,
+.experience-container {
+  background-color: #ffffff; /* White background for each section */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px; /* Space between items */
+  padding: 15px; /* Inner padding */
+}
+
+.education-container:hover,
+.certification-container:hover,
+.experience-container:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover for depth */
+}
+
 /* End Education & Certification Section */
 
 /* Start Work Experience Section */
@@ -267,7 +304,8 @@
 
 #WorkExperience {
   background-color: #f0f8f8; /* Match with Education section background */
-  padding: 50px 0; /* Consistent padding */
+  padding: 50px 0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Consistent padding */
 }
 
 .experience-container {
@@ -279,11 +317,12 @@
   background-color: #ffffff; /* White background for each entry */
   border-radius: 5px; /* Rounded corners */
   padding: 15px; /* Padding inside each entry */
-  transition: box-shadow 0.3s ease; /* Transition effect */
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Transition effect */
 }
 
 .experience-container:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
 
 .company-logo {
@@ -353,7 +392,10 @@
   border-radius: 5px; /* Rounded corners for a softer look */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-
+.testimonial-container:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s; /* Shadow effect on hover */
+}
 .testimonial-container h3 {
   color: #305252; /* Color for name and title */
   font-size: 1.5rem; /* Increased font size for visibility */
