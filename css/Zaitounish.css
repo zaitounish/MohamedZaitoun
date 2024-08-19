@@ -368,30 +368,78 @@
 
 /* End Testimonials Slide Section */
 
-/*Start Contact*/
-.section4 {
-  padding-top: 65px;
+/* Start Contact Slide Section */
+#ContactSlide {
+  background-color: #f0f8f8; /* Light background for consistency */
+  padding: 50px 0; /* Consistent top and bottom padding */
 }
 
 .ctitle {
-  color: #305252;
+  color: #305252; /* Title color consistent with the theme */
   font-weight: 700;
   font-size: 2rem;
+  margin-bottom: 30px; /* Spacing below the title */
 }
 
-.mail {
-  font-size: 1.4rem;
+.contact-details {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align items horizontally */
+  max-width: 600px; /* Max width for better alignment */
+  margin: 0 auto; /* Center the container */
 }
 
-.phone {
-  padding-left: 50px; /* Adjust the value as needed */
-  padding-right: 50px; /* Adjust the value as needed */
-  text-align: center;
-  font-size: 1.4rem;
-  /* Center the text within the padded area */
+.contact-item {
+  background-color: #ffffff; /* White background for each item */
+  border: 1px solid #d5d5d5; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Padding inside the item */
+  margin: 10px 0; /* Margin between items */
+  width: 100%; /* Full width for item */
+  display: flex; /* Flexbox for icon and text */
+  align-items: center; /* Center align icon and text */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.3s; /* Smooth hover effect */
 }
 
-/*End Contact*/
+.contact-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.contact-item i {
+  color: #488286; /* Teal color for icons */
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 1.5em; /* Increase icon size */
+}
+
+.contact-item p {
+  margin: 0; /* Reset margin for paragraphs */
+  font-size: 1.1rem; /* Standard font size for contact info */
+  color: #305252; /* Standard text color */
+}
+
+.contact-item a {
+  color: #488286; /* Teal color for links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.contact-item a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.optional {
+  color: #488286; /* Optional text faded color */
+}
+
+.purpose {
+  margin-top: 20px; /* Space above the purpose statement */
+  text-align: center; /* Center align purpose statement */
+  color: #555; /* Dark gray for readability */
+  font-size: 1rem; /* Standard font size */
+}
+
+/* End Contact Slide Section */
+
 /*Start Footer*/
 
 .footer {
