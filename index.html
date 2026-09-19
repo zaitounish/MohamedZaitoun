@@ -1,442 +1,952 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="css/Zaitounish.css">
-    <title>Mohamed Zaitoun</title>
+    <meta name="description" content="Mohamed Zaitoun — Full-Stack Developer & AI Engineer building React/Node applications and AI-powered production systems.">
+    <meta name="author" content="Mohamed Zaitoun">
+    <title>Mohamed Zaitoun — Full-Stack Developer &amp; AI Engineer</title>
     <link rel="icon" href="images/icon logo.png">
+
+    <!-- Fonts (Exact match to kareem-dev: Gabarito display serif + Be Vietnam Pro sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Gabarito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS (Exact mimic of kareem-dev.com) -->
+    <link rel="stylesheet" href="css/Zaitounish.css">
+
+    <!-- Immediate theme initializer script (prevents flash of incorrect theme) -->
+    <script>
+        (() => {
+            const stored = localStorage.getItem("theme");
+            const theme = stored === "light" || stored === "dark" ? stored : "dark";
+            const root = document.documentElement;
+            root.classList.toggle("dark", theme === "dark");
+            root.classList.toggle("light", theme === "light");
+        })();
+    </script>
 </head>
 
 <body>
 
-    <!-- Start Header -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
-        <a class="navbar-brand" href="https://www.mohamedzaitoun.com/">Zaitounish</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul id="mainLinks" class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Services">Services</a>
-                </li>
-                <li class = "nav-item"> 
-                    <a class="nav-link" href="#Education">Education</a>
-                </li>
-                <li class = "nav-item"> 
-                    <a class="nav-link" href="#Skills">Skills</a>
-                </li>
-                <li class = "nav-item"> 
-                    <a class="nav-link" href="#Work-Experience">Work Experience
-                </a>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Projects">Projects</a>
-                </li>
-                <li class = "nav-item"> 
-                    <a class="nav-link" href="#Feedback">Feedback</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Contact">Contact</a>
-                </li>
+    <!-- ============================================================
+         SITE HEADER & NAVIGATION
+         ============================================================ -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <a href="#hero" class="nav-logo-link" aria-label="Mohamed Zaitoun Home">
+                <img src="images/profile_pic.jpg" alt="Mohamed Zaitoun" class="nav-avatar" width="45" height="45">
+            </a>
 
+            <div class="header-right">
+                <!-- Theme Toggle Button -->
+                <button type="button" id="theme-toggle" class="nav-theme-btn" aria-label="Toggle color theme">
+                    <!-- Sun icon for dark mode (click switches to light) -->
+                    <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+                    </svg>
+                    <!-- Moon icon for light mode (click switches to dark) -->
+                    <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 14.5A8.5 8.5 0 1 1 11.5 3a7 7 0 0 0 9.5 11.5z"></path>
+                    </svg>
+                </button>
 
+                <!-- Mobile menu toggle button -->
+                <button type="button" id="menu-button" class="nav-menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Toggle navigation menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                        <path d="M128 102.4c0-14.138 11.462-25.6 25.6-25.6h332.8c14.138 0 25.6 11.462 25.6 25.6S500.538 128 486.4 128H153.6c-14.138 0-25.6-11.463-25.6-25.6zm358.4 128H25.6C11.462 230.4 0 241.863 0 256c0 14.138 11.462 25.6 25.6 25.6h460.8c14.138 0 25.6-11.462 25.6-25.6 0-14.137-11.462-25.6-25.6-25.6zm0 153.6H256c-14.137 0-25.6 11.462-25.6 25.6 0 14.137 11.463 25.6 25.6 25.6h230.4c14.138 0 25.6-11.463 25.6-25.6 0-14.138-11.462-25.6-25.6-25.6z"></path>
+                    </svg>
+                </button>
 
-                </li>
-                
-            </ul>
-
+                <!-- Desktop / Mobile Nav Menu -->
+                <nav class="nav-menu" id="main-menu">
+                    <ul class="nav-list">
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </nav>
-    <!-- End Header -->
+    </header>
 
+    <main>
+        <!-- ============================================================
+             HERO SECTION
+             ============================================================ -->
+        <section id="hero" class="section-hero">
+            <div class="container">
+                <h1 class="hero-name">Mohamed Zaitoun</h1>
+                <p class="hero-subtitle">Full-Stack Developer &amp; AI Engineer</p>
+                <p class="hero-bio">
+                    I build React/Node apps and AI-powered tools shaped by real merchant-ops experience.
+                    Background in B2B SaaS and DoorDash merchant operations gives me rare product intuition —
+                    not just how to build restaurant technology, but why operators need it.
+                </p>
+                <a href="#contact" class="btn-primary-pill">Get in Touch</a>
+            </div>
+        </section>
 
+        <!-- ============================================================
+             ABOUT ME SECTION
+             ============================================================ -->
+        <section id="about" class="section-about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
 
-    <div class="section1">
-        <div class="container">
+                <div class="about-row">
+                    <div class="about-bio">
+                        <p>
+                            Hi, I'm Mohamed Zaitoun — a full-stack developer and AI engineer transitioning
+                            into a dedicated software engineering role, with hands-on experience building
+                            React/Node.js web applications, integrating third-party APIs, and deploying
+                            AI-powered tools in production environments.
+                        </p>
+                        <p>
+                            Background in B2B SaaS and DoorDash merchant operations provides rare product
+                            intuition understanding not just how to build restaurant technology, but why
+                            operators need it. I focus on measurable impact: shipping dashboards and
+                            automation systems that hit 133% of quarterly targets, 27% QoQ sales growth,
+                            and 17.9% vendor-wide lift.
+                        </p>
+                    </div>
 
-            <div class=" row ">
+                    <!-- Polaroid-style Photo Frame with Profile Picture -->
+                    <div class="polaroid-frame">
+                        <img src="images/profile_pic.jpg" alt="Mohamed Zaitoun" class="polaroid-img" width="260" height="260" loading="lazy">
+                    </div>
+                </div>
 
-                <div class="col-md align-self-center mainText">
+                <div class="about-subsections">
+                    <!-- Education Subsection -->
+                    <div>
+                        <h3 class="subsection-heading">Education</h3>
+                        <div class="edu-item">
+                            <h4 class="edu-school">The Egyptian E-learning University</h4>
+                            <p class="edu-degree">B.Sc. in Information Technology</p>
+                            <span class="edu-meta">Expected 2026</span>
+                        </div>
+                        <div class="edu-item">
+                            <h4 class="edu-school">Udacity</h4>
+                            <p class="edu-degree">Data Analysis Nanodegree</p>
+                            <span class="edu-meta">Completed 2023</span>
+                        </div>
+                    </div>
 
-                    <p id="Hello" class="h2 lead">Hello, I'm Mohamed</p>
-
-                    <h1 id="Junior" class="h1">Junior Ai Engineer</p>
-
-                        <h3 id="analyze" class="h5">I analyze and build intelligent systems using data.</p>
-
-                            <a href="#Projects" id="ViewMyWork" class="btn btn-lg active shadow" role="button"
-                                aria-pressed="true">View my work</a>
-
-                            <div class="social-icons ">
-                                <a TARGET="_blank" href="https://github.com/zaitounish"><i
-                                        class="fa-brands fa-github"></i></a>
-                                <a TARGET="_blank" href="https://www.linkedin.com/in/zaitounish/"><i
-                                        class="fa-brands fa-linkedin"></i></a>
-                                <a TARGET="_blank" href="https://www.instagram.com/zaitounish/"><i
-                                        class="fa-brands fa-instagram"></i></a>
-
+                    <!-- Skills Subsection (2-Column Grid matching kareem-dev) -->
+                    <div>
+                        <h3 class="subsection-heading">Skills</h3>
+                        <div class="skills-grid">
+                            <div>
+                                <h4 class="skill-category-title">Programming</h4>
+                                <ul class="skill-chips-list">
+                                    <li class="skill-chip">Python</li>
+                                    <li class="skill-chip">JavaScript (ES6+)</li>
+                                    <li class="skill-chip">SQL</li>
+                                    <li class="skill-chip">HTML5</li>
+                                    <li class="skill-chip">CSS3</li>
+                                </ul>
                             </div>
-                </div>
-
-                <div class="col-6 ">
-                    <div class="d-none d-md-block ">
-                        <img id="MainCover" class="img-fluid float-left" src="images/profile-pic (2).png" alt=""  ;
-                        >
-                        <!-- <p class="attattribution text-right blockquote-footer">Designed by <a target="_blank"
-                                href="https://www.freepik.com/">Freepik</a></p> -->
+                            <div>
+                                <h4 class="skill-category-title">Frameworks</h4>
+                                <ul class="skill-chips-list">
+                                    <li class="skill-chip">React.js</li>
+                                    <li class="skill-chip">Node.js</li>
+                                    <li class="skill-chip">Express.js</li>
+                                    <li class="skill-chip">LangChain</li>
+                                    <li class="skill-chip">Google Apps Script</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="skill-category-title">AI / ML</h4>
+                                <ul class="skill-chips-list">
+                                    <li class="skill-chip">LLMs</li>
+                                    <li class="skill-chip">NLP</li>
+                                    <li class="skill-chip">Stable Diffusion</li>
+                                    <li class="skill-chip">Generative AI</li>
+                                    <li class="skill-chip">Hugging Face</li>
+                                    <li class="skill-chip">MLflow</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="skill-category-title">Data &amp; BI</h4>
+                                <ul class="skill-chips-list">
+                                    <li class="skill-chip">Pandas</li>
+                                    <li class="skill-chip">NumPy</li>
+                                    <li class="skill-chip">Matplotlib</li>
+                                    <li class="skill-chip">Power BI</li>
+                                    <li class="skill-chip">Tableau</li>
+                                    <li class="skill-chip">A/B Testing</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="skill-category-title">Tools</h4>
+                                <ul class="skill-chips-list">
+                                    <li class="skill-chip">Git / GitHub</li>
+                                    <li class="skill-chip">Gradio</li>
+                                    <li class="skill-chip">Google Colab</li>
+                                    <li class="skill-chip">Salesforce</li>
+                                    <li class="skill-chip">VMware</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="skill-category-title">Languages</h4>
+                                <ul class="skill-chips-list">
+                                    <li class="skill-chip">English (C1)</li>
+                                    <li class="skill-chip">Arabic (Native)</li>
+                                    <li class="skill-chip">German (A1)</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-        </div>
-
-    </div>
-    </div>
-
-    <div id="Services" class="section2">
-        <div class="container text-center ">
-            <h2 class="h2 stitle whitetitle">Services</h2>
-            <div class="row all-cards">
-                <div class="col">
-                    <div class="cards">
-                        <div class="icon">
-                            <i class="fa-solid fa-chalkboard"></i>
+                    <!-- Feedback & Testimonials -->
+                    <div class="testimonials-section">
+                        <h3 class="subsection-heading">Feedback &amp; Testimonials</h3>
+                        <div class="testimonial-card">
+                            <h4 class="testimonial-author">Ahmed Assal · Technical Team Manager at Augmentoria</h4>
+                            <p class="testimonial-text">
+                                &ldquo;Mohamed's contributions as an AI Engineer were instrumental in pushing our
+                                projects to success. His expertise in developing AI models and collaborating
+                                with cross-functional teams was evident in every task he handled. His ability
+                                to innovate and optimize machine learning algorithms helped us achieve better
+                                performance and faster results. Mohamed's dedication and problem-solving
+                                skills are truly commendable.&rdquo;
+                            </p>
                         </div>
-                        <div class="info">
-                            <h3>Machine Learning Model Development</h3>
-                            <p>Designing, developing, and implementing machine learning models using tools like Langchain, enhancing data interpretation and decision-making capabilities.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="cards">
-                        <div class="icon">
-                            <i class="fa-solid fa-gear"></i>
-                        </div>
-                        <div class="info">
-                            <h3>Generative AI & Prompt Engineering</h3>
-                            <p>Creating and managing generative AI projects, including crafting effective prompts that optimize the performance and usability of AI models.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="cards">
-                        <div class="icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                        <div class="info">
-                            <h3>Application Development</h3>
-                            <p>Building user-friendly applications with tools like Gradio, focusing on creating intuitive interfaces for machine learning models and ensuring seamless user experiences.
+                        <div class="testimonial-card">
+                            <h4 class="testimonial-author">Labib Darwish · Team Lead at Sutherland AT&amp;T MSS</h4>
+                            <p class="testimonial-text">
+                                &ldquo;As a Customer Service Representative, Mohamed consistently exceeded
+                                expectations. His ability to quickly build rapport with customers and resolve
+                                their issues was impressive. His work ethic and commitment to maintaining
+                                high customer satisfaction rates played a crucial role in our team's success.
+                                Mohamed's proactive approach and attention to detail make him an asset to any
+                                team.&rdquo;
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
+        <!-- ============================================================
+             WORK EXPERIENCE SECTION (Vertical Timeline Format)
+             ============================================================ -->
+        <section id="experience" class="section-experience">
+            <div class="container">
+                <h2 class="section-title">Work Experience</h2>
 
-
-
-
-
-        <div class="container text-center ">
-            <div class="row all-cards">
-                <div class="col">
-                    <div class="cards">
-                        <div class="icon">
-                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <!-- 1. DoorDash via Concentrix -->
+                <div class="exp-block">
+                    <div class="exp-org-header">
+                        <a href="https://www.doordash.com" target="_blank" rel="noopener noreferrer" class="exp-org-logo-link" aria-label="DoorDash website">
+                            <img src="images/DoorDash logo.png" alt="DoorDash logo" class="exp-org-logo">
+                        </a>
+                        <div class="exp-org-info">
+                            <div class="exp-org-title-row">
+                                <h3 class="exp-org-name">
+                                    <a href="https://www.doordash.com" target="_blank" rel="noopener noreferrer">DoorDash</a>
+                                </h3>
+                                <span class="badge-current">
+                                    <span class="badge-current-pulse" aria-hidden="true"></span>
+                                    Current
+                                </span>
+                                <span class="exp-org-dates">
+                                    <span class="exp-date-dash" aria-hidden="true"></span>
+                                    Oct 2025 &mdash; Present
+                                </span>
+                            </div>
                         </div>
-                        <div class="info">
-                            <h3>Data Cleaning</h3>
-                            <p>fixing or removing incorrect, corrupted, incorrectly formatted, duplicate, or incomplete
-                                data within a dataset.</p>
+                    </div>
+
+                    <div class="exp-timeline-body">
+                        <div>
+                            <div class="exp-subrole-header">
+                                <img src="images/Concentrix logo.png" alt="Concentrix logo" class="exp-client-logo">
+                                <h4 class="exp-subrole-title">Concentrix</h4>
+                                <span class="badge-client">Vendor</span>
+                            </div>
+                            <p class="exp-role-name">Merchant Success Manager</p>
+                            <span class="exp-role-meta">Oct 2025 &mdash; Present &middot; Vendor Floor Production</span>
+                            <ul class="exp-bullets">
+                                <li>Increased markup sales by <strong>27% QoQ</strong> and achieved <strong>133% of the quarterly target</strong> by engineering MSM Markup Tracker, a full-stack BI application that automated manual pricing-compliance workflows for CNX vendor floor production.</li>
+                                <li>Boosted overall CNX vendor sales by <strong>17.9%</strong> by building MSM Campaign Dispatcher, an automated application that deploys targeted marketing campaigns by dispatching customized deep-links to merchants in under 10 minutes based on tailored business needs.</li>
+                                <li>Consistently achieved monthly and quarterly performance targets across a rotating portfolio of <strong>400+ DoorDash merchant accounts</strong> by resolving complex operational complications and driving proactive account management.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="cards">
-                        <div class="icon">
-                            <i class="fa-solid fa-chart-pie"></i>
-                        </div>
-                        <div class="info">
-                            <h3>Data Visualization</h3>
-                            <p>transforming information and data into a visual context, such as a map or graph, to make
-                                data easier to understand.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="cards">
-                        <div class="icon">
-                            <i class="fa-solid fa-square-pen"></i>
-                        </div>
-                        <div class="info">
-                            <h3>Report Writing</h3>
-                            <p>writing an overview of the problem, modeling the data approach and the result, and the
-                                summary of the analysis.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div id="Education" class="section">
-        <div class="container container-education-all">
-            <h2 class="h2 ctitle text-center ">Education & Certification</h2>
-    
-            <div class="row education-container">
-                <div class="col-md-2">
-                    <img src="images/EELU LOGO.png" class="institution-logo img-fluid" alt="Egyptian E-learning University Logo">
+                <!-- 2. DoorDash Commerce Platform via Concentrix -->
+                <div class="exp-block">
+                    <div class="exp-org-header">
+                        <a href="https://www.doordash.com" target="_blank" rel="noopener noreferrer" class="exp-org-logo-link" aria-label="DoorDash Commerce Platform">
+                            <img src="images/DoorDash logo.png" alt="DoorDash Commerce Platform" class="exp-org-logo">
+                        </a>
+                        <div class="exp-org-info">
+                            <div class="exp-org-title-row">
+                                <h3 class="exp-org-name">
+                                    <a href="https://www.doordash.com" target="_blank" rel="noopener noreferrer">DoorDash Commerce Platform</a>
+                                </h3>
+                                <span class="exp-org-dates">
+                                    <span class="exp-date-dash" aria-hidden="true"></span>
+                                    Jul 2025 &mdash; Oct 2025
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp-timeline-body">
+                        <div>
+                            <div class="exp-subrole-header">
+                                <img src="images/Concentrix logo.png" alt="Concentrix logo" class="exp-client-logo">
+                                <h4 class="exp-subrole-title">Concentrix</h4>
+                                <span class="badge-client">Vendor</span>
+                            </div>
+                            <p class="exp-role-name">SaaS Sales Representative</p>
+                            <span class="exp-role-meta">Jul 2025 &mdash; Oct 2025 &middot; B2B Pipeline</span>
+                            <ul class="exp-bullets">
+                                <li>Achieved <strong>118% of sales quota</strong> by driving B2B adoption of the DoorDash Commerce Platform (including white-label online ordering, branded mobile apps, and cross-channel loyalty programs) through full-cycle pipeline management.</li>
+                                <li>Accelerated deal velocity by <strong>20%</strong> by consulting non-technical restaurant operators on digital transformation, mapping out how automated marketing and SEO-optimized web solutions translate to direct revenue growth.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-10">
-                    <h3>The Egyptian E-learning University</h3>
-                    <p>B.Sc. in Information Technology (Expected 2025)</p>
+
+                <!-- 3. Digital Egypt Pioneers Initiative (DEPI) -->
+                <div class="exp-block">
+                    <div class="exp-org-header">
+                        <div class="exp-org-logo-link">
+                            <img src="images/DEPI logo.png" alt="DEPI logo" class="exp-org-logo">
+                        </div>
+                        <div class="exp-org-info">
+                            <div class="exp-org-title-row">
+                                <h3 class="exp-org-name">Digital Egypt Pioneers Initiative (DEPI)</h3>
+                                <span class="exp-org-dates">
+                                    <span class="exp-date-dash" aria-hidden="true"></span>
+                                    Apr 2024 &mdash; Oct 2024
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp-timeline-body">
+                        <div>
+                            <p class="exp-role-name">Generative AI Engineer Trainee</p>
+                            <span class="exp-role-meta">Apr 2024 &mdash; Oct 2024 &middot; Intensive Program</span>
+                            <ul class="exp-bullets">
+                                <li>Developed <strong>ArtifyAI-v1.1</strong>, a multilingual text-to-image application, by fine-tuning a Stable Diffusion model on <strong>5,000+ COCO images</strong> and integrating a T5 NLP model to process English, German, Romanian, and French prompts.</li>
+                                <li>Gained production-grade MLOps experience by utilizing <strong>MLflow and Hugging Face</strong> for model versioning, experiment tracking, and deployment pipelines throughout a <strong>177-hour intensive AI/ML program</strong>.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- 4. Augmentoria Sweden -->
+                <div class="exp-block">
+                    <div class="exp-org-header">
+                        <div class="exp-org-logo-link">
+                            <img src="images/augmentoria_logo.jpeg" alt="Augmentoria logo" class="exp-org-logo">
+                        </div>
+                        <div class="exp-org-info">
+                            <div class="exp-org-title-row">
+                                <h3 class="exp-org-name">Augmentoria</h3>
+                                <span class="exp-org-dates">
+                                    <span class="exp-date-dash" aria-hidden="true"></span>
+                                    Oct 2023 &mdash; May 2024
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp-timeline-body">
+                        <div>
+                            <p class="exp-role-name">AI Engineer (Remote)</p>
+                            <span class="exp-role-meta">Oct 2023 &mdash; May 2024 &middot; Sweden (Remote)</span>
+                            <ul class="exp-bullets">
+                                <li>Built and deployed <strong>3+ LLM-powered business automation applications</strong> using LangChain and Python, improving response accuracy and eliminating manual processing bottlenecks across diverse business workflows.</li>
+                                <li>Developed user-facing data interfaces with <strong>Gradio</strong>, enabling non-technical stakeholders to interact directly with AI pipelines without requiring engineering support.</li>
+                                <li>Designed and iterated on prompt engineering strategies that optimized model output quality for <strong>data extraction, classification, and business automation</strong> use cases.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. AT&T via Sutherland -->
+                <div class="exp-block">
+                    <div class="exp-org-header">
+                        <a href="https://www.att.com" target="_blank" rel="noopener noreferrer" class="exp-org-logo-link" aria-label="AT&T website">
+                            <img src="images/sutherland_global_logo.jpeg" alt="Sutherland logo" class="exp-org-logo">
+                        </a>
+                        <div class="exp-org-info">
+                            <div class="exp-org-title-row">
+                                <h3 class="exp-org-name">
+                                    <a href="https://www.att.com" target="_blank" rel="noopener noreferrer">AT&amp;T</a>
+                                </h3>
+                                <span class="exp-org-dates">
+                                    <span class="exp-date-dash" aria-hidden="true"></span>
+                                    Nov 2022 &mdash; Oct 2023
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp-timeline-body">
+                        <div>
+                            <div class="exp-subrole-header">
+                                <img src="images/sutherland_global_logo.jpeg" alt="Sutherland logo" class="exp-client-logo">
+                                <h4 class="exp-subrole-title">Sutherland</h4>
+                                <span class="badge-client">Vendor</span>
+                            </div>
+                            <p class="exp-role-name">Customer Service Representative</p>
+                            <span class="exp-role-meta">Nov 2022 &mdash; Oct 2023 &middot; AT&amp;T MSS</span>
+                            <ul class="exp-bullets">
+                                <li>Resolved <strong>94% of technical issues on the first call</strong> across <strong>1,000+ client interactions</strong> using enterprise tools including VMware, Salesforce, and Avaya.</li>
+                                <li>Maintained a <strong>96% CSAT rating</strong> through structured technical troubleshooting, proactive problem-solving, and consistent client communication.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-    
-            <div class="row certification-container">
-                <div class="col-md-2">
-                    <img src="images/udacity.jpg" class="institution-logo img-fluid" alt="Udacity Logo">
+        </section>
+
+        <!-- ============================================================
+             LATEST PROJECTS SECTION (Dual-Column Carousel)
+             ============================================================ -->
+        <section id="projects" class="section-projects">
+            <div class="container">
+                <h2 class="section-title">Latest Projects</h2>
+
+                <div class="carousel-container" id="projects-carousel">
+                    <div class="carousel-track" id="projects-track">
+
+                        <!-- Slide 1: MSM Markup Tracker -->
+                        <article class="project-card">
+                            <div class="project-card-inner">
+                                <div class="project-info-col">
+                                    <div class="project-header-row">
+                                        <img src="images/icon logo.png" alt="" class="project-icon">
+                                        <h3 class="project-title">MSM Markup Tracker</h3>
+                                    </div>
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">React.js</span>
+                                        <span class="project-tag">Node.js</span>
+                                        <span class="project-tag">Power BI</span>
+                                        <span class="project-tag">B2B SaaS</span>
+                                    </div>
+                                    <p class="project-desc">
+                                        Full-stack BI application that automated manual pricing-compliance workflows for CNX vendor floor production, driving a 27% QoQ increase in markup sales and 133% quarterly target attainment.
+                                    </p>
+                                    <div class="project-links-row">
+                                        <a href="https://github.com/zaitounish/msm-markup-tracker" target="_blank" rel="noopener noreferrer" class="project-link">Source</a>
+                                    </div>
+                                </div>
+                                <div class="project-image-col">
+                                    <img src="images/MainCover.jpg" alt="MSM Markup Tracker preview" class="project-preview-img" loading="lazy">
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 2: MSM Campaign Dispatcher -->
+                        <article class="project-card">
+                            <div class="project-card-inner">
+                                <div class="project-info-col">
+                                    <div class="project-header-row">
+                                        <img src="images/icon logo.png" alt="" class="project-icon">
+                                        <h3 class="project-title">MSM Campaign Dispatcher</h3>
+                                    </div>
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">React.js</span>
+                                        <span class="project-tag">Node.js</span>
+                                        <span class="project-tag">Automation</span>
+                                        <span class="project-tag">B2B</span>
+                                    </div>
+                                    <p class="project-desc">
+                                        Automated campaign deployment application that dispatches tailored deep-link marketing campaigns to merchants in under 10 minutes, boosting overall CNX vendor sales by 17.9%.
+                                    </p>
+                                    <div class="project-links-row">
+                                        <a href="https://github.com/zaitounish/MSM-Campaign-Dispatcher" target="_blank" rel="noopener noreferrer" class="project-link">Source</a>
+                                    </div>
+                                </div>
+                                <div class="project-image-col">
+                                    <img src="images/MainCover.jpg" alt="MSM Campaign Dispatcher preview" class="project-preview-img" loading="lazy">
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 3: ArtifyAI-v1.1 -->
+                        <article class="project-card">
+                            <div class="project-card-inner">
+                                <div class="project-info-col">
+                                    <div class="project-header-row">
+                                        <img src="images/icon logo.png" alt="" class="project-icon">
+                                        <h3 class="project-title">ArtifyAI-v1.1</h3>
+                                    </div>
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">Stable Diffusion</span>
+                                        <span class="project-tag">T5 NLP</span>
+                                        <span class="project-tag">Multilingual</span>
+                                        <span class="project-tag">Python</span>
+                                    </div>
+                                    <p class="project-desc">
+                                        Multilingual text-to-image application. Fine-tuned Stable Diffusion on 5,000+ COCO images and integrated a T5 NLP model supporting English, German, Romanian, and French text prompts.
+                                    </p>
+                                    <div class="project-links-row">
+                                        <a href="https://huggingface.co/ImageInception/ArtifyAI-v1.1" target="_blank" rel="noopener noreferrer" class="project-link">Hugging Face</a>
+                                    </div>
+                                </div>
+                                <div class="project-image-col">
+                                    <img src="images/MainCover.jpg" alt="ArtifyAI preview" class="project-preview-img" loading="lazy">
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 4: Analyze A/B Test Results -->
+                        <article class="project-card">
+                            <div class="project-card-inner">
+                                <div class="project-info-col">
+                                    <div class="project-header-row">
+                                        <img src="images/jupyter notbook.png" alt="" class="project-icon">
+                                        <h3 class="project-title">Analyze A/B Test Results</h3>
+                                    </div>
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">A/B Testing</span>
+                                        <span class="project-tag">Statistics</span>
+                                        <span class="project-tag">Python</span>
+                                    </div>
+                                    <p class="project-desc">
+                                        Statistical evaluation of an e-commerce A/B test to determine whether a new webpage design produced a significant increase in user conversion rates using hypothesis testing and regression approaches.
+                                    </p>
+                                    <div class="project-links-row">
+                                        <a href="https://github.com/zaitounish/Analyze-A-B-Test-Results" target="_blank" rel="noopener noreferrer" class="project-link">Source</a>
+                                    </div>
+                                </div>
+                                <div class="project-image-col">
+                                    <img src="images/jupyter notbook.png" alt="A/B Testing preview" class="project-preview-img" loading="lazy">
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 5: Train RAG SemanticSearch -->
+                        <article class="project-card">
+                            <div class="project-card-inner">
+                                <div class="project-info-col">
+                                    <div class="project-header-row">
+                                        <img src="images/python.jpg" alt="" class="project-icon">
+                                        <h3 class="project-title">Train RAG SemanticSearch</h3>
+                                    </div>
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">LangChain</span>
+                                        <span class="project-tag">RAG</span>
+                                        <span class="project-tag">NLP</span>
+                                        <span class="project-tag">Hugging Face</span>
+                                    </div>
+                                    <p class="project-desc">
+                                        Fine-tuned a Retrieval-Augmented Generation (RAG) model for semantic search, improving query relevance by understanding intent and context for a more intuitive end-user search experience.
+                                    </p>
+                                    <div class="project-links-row">
+                                        <a href="https://huggingface.co/Zaitounish/Train-RAG-SemanticSearch" target="_blank" rel="noopener noreferrer" class="project-link">Hugging Face</a>
+                                    </div>
+                                </div>
+                                <div class="project-image-col">
+                                    <img src="images/python.jpg" alt="RAG Semantic Search preview" class="project-preview-img" loading="lazy">
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 6: Hypothetical Document Embeddings -->
+                        <article class="project-card">
+                            <div class="project-card-inner">
+                                <div class="project-info-col">
+                                    <div class="project-header-row">
+                                        <img src="images/python.jpg" alt="" class="project-icon">
+                                        <h3 class="project-title">Hypothetical Document Embeddings</h3>
+                                    </div>
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">NLP</span>
+                                        <span class="project-tag">Embeddings</span>
+                                        <span class="project-tag">Python</span>
+                                    </div>
+                                    <p class="project-desc">
+                                        Created semantic document embeddings using advanced NLP techniques for downstream tasks including text classification, clustering, and semantic search, with distribution visualizations across document types.
+                                    </p>
+                                    <div class="project-links-row">
+                                        <a href="https://huggingface.co/Zaitounish/Hypothetical_Document_Embeddings/tree/main" target="_blank" rel="noopener noreferrer" class="project-link">Hugging Face</a>
+                                    </div>
+                                </div>
+                                <div class="project-image-col">
+                                    <img src="images/python.jpg" alt="Embeddings preview" class="project-preview-img" loading="lazy">
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 7: US Census Demographic Data -->
+                        <article class="project-card">
+                            <div class="project-card-inner">
+                                <div class="project-info-col">
+                                    <div class="project-header-row">
+                                        <img src="images/US Census Demographic Data.png" alt="" class="project-icon">
+                                        <h3 class="project-title">US Census Demographic Data</h3>
+                                    </div>
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">Tableau</span>
+                                        <span class="project-tag">Data Viz</span>
+                                        <span class="project-tag">Dashboards</span>
+                                    </div>
+                                    <p class="project-desc">
+                                        2015 county-level US census data from Kaggle, visualized with 1 story and 2 Tableau dashboards. Each visualization includes written rationale and design decisions.
+                                    </p>
+                                    <div class="project-links-row">
+                                        <a href="https://github.com/zaitounish/US-Census-Demographic-Data-Tableau" target="_blank" rel="noopener noreferrer" class="project-link">Source</a>
+                                    </div>
+                                </div>
+                                <div class="project-image-col">
+                                    <img src="images/US Census Demographic Data.png" alt="US Census Tableau preview" class="project-preview-img" loading="lazy">
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 8: No Show Appointments -->
+                        <article class="project-card">
+                            <div class="project-card-inner">
+                                <div class="project-info-col">
+                                    <div class="project-header-row">
+                                        <img src="images/python.jpg" alt="" class="project-icon">
+                                        <h3 class="project-title">No Show Appointments</h3>
+                                    </div>
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">Pandas</span>
+                                        <span class="project-tag">Python</span>
+                                        <span class="project-tag">EDA</span>
+                                    </div>
+                                    <p class="project-desc">
+                                        Analyzed 100,000+ medical appointments across Brazil to identify patterns and key factors influencing whether patients show up for their scheduled appointments.
+                                    </p>
+                                    <div class="project-links-row">
+                                        <a href="https://github.com/zaitounish/Investigate-a-Dataset-No-show-appointments-" target="_blank" rel="noopener noreferrer" class="project-link">Source</a>
+                                    </div>
+                                </div>
+                                <div class="project-image-col">
+                                    <img src="images/python.jpg" alt="No Show Appointments preview" class="project-preview-img" loading="lazy">
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 9: Explore US Bikeshare Data -->
+                        <article class="project-card">
+                            <div class="project-card-inner">
+                                <div class="project-info-col">
+                                    <div class="project-header-row">
+                                        <img src="images/python.jpg" alt="" class="project-icon">
+                                        <h3 class="project-title">Explore US Bikeshare Data</h3>
+                                    </div>
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">Python</span>
+                                        <span class="project-tag">EDA</span>
+                                        <span class="project-tag">NumPy</span>
+                                    </div>
+                                    <p class="project-desc">
+                                        Exploratory analysis of bike share system datasets for three major US cities — Chicago, New York City, and Washington — using Python to surface rider behavior insights and patterns.
+                                    </p>
+                                    <div class="project-links-row">
+                                        <a href="https://github.com/zaitounish/Explore-US-Bikeshare-Data" target="_blank" rel="noopener noreferrer" class="project-link">Source</a>
+                                    </div>
+                                </div>
+                                <div class="project-image-col">
+                                    <img src="images/python.jpg" alt="Bikeshare preview" class="project-preview-img" loading="lazy">
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Slide 10: Query a Digital Music Store Database -->
+                        <article class="project-card">
+                            <div class="project-card-inner">
+                                <div class="project-info-col">
+                                    <div class="project-header-row">
+                                        <img src="images/SQL.jpg" alt="" class="project-icon">
+                                        <h3 class="project-title">Query a Digital Music Store</h3>
+                                    </div>
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">SQL</span>
+                                        <span class="project-tag">Analytics</span>
+                                        <span class="project-tag">Relational DB</span>
+                                    </div>
+                                    <p class="project-desc">
+                                        Advanced SQL analysis of the Parch &amp; Posey digital music store database, answering business questions on media sales, customer purchasing behavior, and invoice trends.
+                                    </p>
+                                    <div class="project-links-row">
+                                        <a href="https://github.com/zaitounish/Query-a-Digital-Music-Store-Database" target="_blank" rel="noopener noreferrer" class="project-link">Source</a>
+                                    </div>
+                                </div>
+                                <div class="project-image-col">
+                                    <img src="images/SQL.jpg" alt="SQL Database preview" class="project-preview-img" loading="lazy">
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
                 </div>
-                <div class="col-md-10">
-                    <h3>Udacity</h3>
-                    <p>Data Analysis Nanodegree</p>
+
+                <!-- Carousel Navigation Controls -->
+                <div class="carousel-controls">
+                    <div class="carousel-btn-group">
+                        <button type="button" id="projects-prev" class="carousel-nav-btn" aria-label="Previous project" disabled>Prev</button>
+                        <button type="button" id="projects-next" class="carousel-nav-btn" aria-label="Next project">Next</button>
+                    </div>
+                    <div id="projects-dots" class="carousel-dots" aria-label="Project slide navigation"></div>
                 </div>
+
             </div>
-        </div>
-    </div>
-    
-    <div id="Skills" class="section">
-        <div class="container">
-            <h2 class="h2 ctitle text-center whitetitle">Skills</h2>
-            <div class="skills-container">
-                <!-- <h3>Skills:</h3> -->
-                <ul class="skills-list">
-                    <li><strong>Programming Languages:</strong> Python, SQL, HTML5, CSS3</li>
-                    <li><strong>Machine Learning:</strong> LLMs, Generative AI, Prompt Engineering, Langchain, NLP</li>
-                    <li><strong>Data Analysis:</strong> A/B Testing, NumPy, Pandas, Matplotlib, Data Visualization</li>
-                    <li><strong>Tools:</strong> Tableau, Git/GitHub, Hugging Face, Jupyter Notebook, Gradio, Google Colab</li>
-                    <li><strong>Graphic Design:</strong> Adobe Photoshop, Premiere, Illustrator, Filmora, Canva, Invideo</li>
-                    <li><strong>Languages:</strong> English (C1), Arabic (Native), German (A1)</li>
+        </section>
+
+        <!-- ============================================================
+             CONTACT SECTION
+             ============================================================ -->
+        <section id="contact" class="section-contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+
+                <h3 class="contact-subtitle">Let&rsquo;s talk</h3>
+                <p class="contact-para">
+                    Open to interesting full-stack engineering, AI, and production software problems,
+                    collaborations, and conversations about B2B SaaS, data engineering, and AI-powered automation.
+                </p>
+
+                <div class="contact-actions">
+                    <a href="mailto:work@mohamedzaitoun.com" class="btn-primary-pill">Email me</a>
+                    <button type="button" id="cv-preview-open" class="btn-secondary-pill" aria-label="Preview CV">Preview CV</button>
+                </div>
+
+                <ul class="contact-links-list">
+                    <li>
+                        <a href="mailto:work@mohamedzaitoun.com" class="contact-item-link">work@mohamedzaitoun.com</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/zaitounish/" target="_blank" rel="noopener noreferrer" class="contact-item-link">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/zaitounish" target="_blank" rel="noopener noreferrer" class="contact-item-link">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="https://www.mohamedzaitoun.com" target="_blank" rel="noopener noreferrer" class="contact-item-link">Portfolio</a>
+                    </li>
                 </ul>
             </div>
-            <!-- <p class="skills-purpose"><strong>Purpose:</strong> Display your range of skills across different domains.</p> -->
+        </section>
+    </main>
+
+    <!-- ============================================================
+         CV LIGHTBOX DIALOG (Modal PDF Preview matching kareem-dev)
+         ============================================================ -->
+    <dialog id="cv-lightbox" data-resume-url="Mohamed%20Zaitoun%20Resume.pdf" aria-label="CV preview">
+        <div class="cv-modal-box">
+            <div class="cv-modal-header">
+                <p class="cv-modal-title">Mohamed Zaitoun &mdash; CV</p>
+                <div class="cv-modal-actions">
+                    <a id="cv-lightbox-download" href="Mohamed%20Zaitoun%20Resume.pdf" download="Mohamed-Zaitoun-Resume.pdf" class="cv-download-btn">Download</a>
+                    <button type="button" id="cv-lightbox-close" class="cv-close-btn" aria-label="Close CV preview">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="cv-modal-body">
+                <iframe id="cv-lightbox-frame" title="Mohamed Zaitoun CV Preview" class="cv-frame" loading="lazy"></iframe>
+            </div>
         </div>
-    </div>
-    
-    <div id="Work-Experience" class="section">
+    </dialog>
+
+    <!-- ============================================================
+         SITE FOOTER
+         ============================================================ -->
+    <footer class="site-footer">
         <div class="container">
-            <h2 class="h2 ctitle text-center">Work Experience</h2>
-            
-            <!-- Experience 1 -->
-            <div class="row experience-container">
-                <div class="col-md-2">
-                    <img src="images/augmentoria_logo.jpeg" class="company-logo institution-logo img-fluid" alt="Augmentoria Logo">
-                </div>
-                <div class="col-md-10">
-                    <h3>AI Engineer</h3>
-                    <p>Developed and implemented AI models, collaborated with cross-functional teams, and optimized machine learning algorithms for performance.</p>
-                </div>
-            </div>
-    
-            <!-- Experience 2 -->
-            <div class="row experience-container">
-                <div class="col-md-2">
-                    <img src="images/sutherland_global_logo.jpeg" class="company-logo institution-logo img-fluid" alt="Sutherland Logo">
-                </div>
-                <div class="col-md-10">
-                    <h3>Customer Service Representative</h3>
-                    <p>Handled customer inquiries, provided product information and support, and maintained high customer satisfaction ratings.</p>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-    
-
-    
-    
-    
-    
-    <div id="Projects" class="section3">
-        <div class="container text-center">
-
-            <h2 class="h2 ptitle whitetitle">Projects</h2>
-
-            <div class="row row-cols-1 row-cols-md-2 all-cards">
-
-                <div class="col mb-4">
-                    <div class="card cards">
-                        <!-- <img src="images/US Census Demographic Data.png" class="card-img-top" alt="..."> -->
-                        <div class="card-body">
-                            <h5 class="card-title">Hypothetical Document Embeddings</h5>
-                            <p class="card-text">This project involved working with a hypothetical dataset to create document embeddings that capture the semantic meaning of texts. 
-                                Using advanced techniques in NLP, I trained models to generate embeddings that could be used for various downstream tasks such as text classification, clustering, and semantic search. The resulting embeddings were visualized to understand the distribution and relationship between different document types.</p>
-                            <a target="_blank" href="https://huggingface.co/Zaitounish/Hypothetical_Document_Embeddings/tree/main" class="btn btn-card pd-0">Open the project</a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="card cards">
-                        <!-- <img src="images/jupyter notbook.png" class="card-img-top" alt="..."> -->
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Train RAG SemanticSearch</h5>
-                            <p class="card-text">In this project, I focused on enhancing the accuracy of search results by training a Retrieval-Augmented Generation (RAG) model for semantic search. The dataset included a large corpus of documents, and the goal was to improve the relevance of search queries by understanding the intent and context behind them. I fine-tuned the RAG model to optimize its performance, resulting in a more intuitive and efficient search experience for end-users.                            </p>
-                            <a target="_blank" href="https://huggingface.co/Zaitounish/Train-RAG-SemanticSearch" class="btn btn-card pd-0">Open the project</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col mb-4">
-                    <div class="card cards">
-                        <img src="images/US Census Demographic Data.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">US Census Demographic Data</h5>
-                            <p class="card-text">This data comes from a Kaggle dataset, it includes the census data for
-                                all counties in 2015.
-                                I have visualized this dataset using tableau and I made 1 story and 2 dashboards.
-                                I wrote for every visualization summary and the reason that we chose this specific
-                                design feel free to check them out and read further info.</p>
-                            <a target="_blank" href="https://github.com/zaitounish/US-Census-Demographic-Data-Tableau" class="btn btn-card pd-0">Open the project</a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="card cards">
-                        <img src="images/jupyter notbook.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                No Show Appointments</h5>
-                            <p class="card-text">This dataset collects information from 100k medical appointments in
-                                Brazil and is focused on the question of whether or not patients show up for their
-                                appointment.</p>
-                            <a target="_blank" href="https://github.com/zaitounish/Investigate-a-Dataset-No-show-appointments-" class="btn btn-card pd-0">Open the project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="card cards">
-                        <img src="images/python.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Explore US Bikeshare Data</h5>
-                            <p class="card-text">in this project, I used python to explore data related to bike share
-                                systems for three major cities in the United States Chicago, New York City, and
-                                Washington.
-                            </p>
-                            <a target="_blank" href="https://github.com/zaitounish/Explore-US-Bikeshare-Data" class="btn btn-card pd-0">Open the project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="card cards">
-                        <img src="images/SQL.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Query a Digital Music Store Database</h5>
-                            <p class="card-text">
-                                The Parch and Posey Database holds information about a music store. I made 4 questions
-                                using the SQL, so I will be able to understand their media in their store, their
-                                customers and employees, and their invoice information. </p>
-                            <a target="_blank" href="https://github.com/zaitounish/Query-a-Digital-Music-Store-Database" class="btn btn-card pd-0">Open the project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="Feedback" class="section">
-        <div class="container">
-            <h2 class="h2 ctitle text-center">Feedback & Testimonials</h2>
-            
-            <!-- Testimonial 1 -->
-            <div class="testimonial-container">
-                <h3>Ahmed Assal, Technical Team Manager at Augmentoria</h3>
-                <p class="testimonial-quote">"Mohamed's contributions as an AI Engineer were instrumental in pushing our projects to success. His expertise in developing AI models and collaborating with cross-functional teams was evident in every task he handled. His ability to innovate and optimize machine learning algorithms helped us achieve better performance and faster results. Mohamed's dedication and problem-solving skills are truly commendable."</p>
-            </div>
-    
-            <!-- Testimonial 2 -->
-            <div class="testimonial-container">
-                <h3>Labib Darwish, Team Lead at Sutherland AT&T MSS</h3>
-                <p class="testimonial-quote">"As a Customer Service Representative, Mohamed consistently exceeded expectations. His ability to quickly build rapport with customers and resolve their issues was impressive. His work ethic and commitment to maintaining high customer satisfaction rates played a crucial role in our team’s success. Mohamed's proactive approach and attention to detail make him an asset to any team."</p>
-            </div>
-    
-        </div>
-    </div>
-    
-    <div id="Contact" class="section">
-        <div class="container">
-            <h2 class="ctitle text-center whitetitle">Contact</h2>
-            <div class="contact-details">
-                <div class="contact-item">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <p>Email: <a href="mailto:work@.com">work@mohamedzaitoun.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                    <p>LinkedIn: <a href="https://www.https://www.linkedin.com/in/zaitounish/" target="_blank">Mohamed Zaitoun</a></p>
-                </div>
-                <div class="contact-item">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <p>Phone Number: <span class="optional">(+20) 1158137422</span></p>
-                </div>
-                <!-- <div class="contact-item">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <p>Location: Alexandria, Egypt <span class="optional">(optional)</span></p>
-                </div> -->
-            </div>
-            <!-- <p class="purpose text-center">Purpose: Provide your contact details for follow-up.</p> -->
-        </div>
-    </div>
-    
-    
-    
-    </div>
-
-
-    <footer class="footer">
-        <p class="footer-title">@Zaitounish</p>
-        <div class="social-icons ">
-            <a TARGET="_blank" href="https://github.com/zaitounish"><i class="fa-brands fa-github"></i></a>
-            <a TARGET="_blank" href="https://www.linkedin.com/in/zaitounish/"><i class="fa-brands fa-linkedin"></i></a>
-            <a TARGET="_blank" href="https://www.instagram.com/zaitounish/"><i class="fa-brands fa-instagram"></i></a>
-
+            <p>Mohamed Zaitoun &copy; <span id="yearSpan"></span></p>
         </div>
     </footer>
 
+    <!-- ============================================================
+         INTERACTIVE SCRIPTS (Theme, Scrollspy, Carousel, Modal)
+         ============================================================ -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('yearSpan').textContent = new Date().getFullYear();
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script>
+        // ---------------- Theme Toggle ----------------
+        const themeBtn = document.getElementById('theme-toggle');
+        const applyTheme = (t) => {
+            const root = document.documentElement;
+            root.classList.toggle('dark', t === 'dark');
+            root.classList.toggle('light', t === 'light');
+            try { localStorage.setItem('theme', t); } catch (_) {}
+        };
+        themeBtn?.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+            applyTheme(isDark ? 'light' : 'dark');
+        });
 
+        // ---------------- Mobile Menu ----------------
+        const menuBtn = document.getElementById('menu-button');
+        const mainMenu = document.getElementById('main-menu');
+        menuBtn?.addEventListener('click', () => {
+            mainMenu?.classList.toggle('open');
+            const isOpen = mainMenu?.classList.contains('open');
+            menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // ---------------- Navigation Scrollspy ----------------
+        const navLinks = [...document.querySelectorAll('#main-menu a')];
+        const sections = navLinks.map(a => {
+            const id = a.getAttribute('href')?.slice(1);
+            return id ? document.getElementById(id) : null;
+        }).filter(Boolean);
+
+        const updateScrollspy = () => {
+            const scrollY = window.scrollY;
+            const headerHeight = (document.getElementById('siteHeader')?.offsetHeight || 80) + 24;
+
+            if (sections.length === 0) return;
+            const lastSec = sections[sections.length - 1];
+            if (document.documentElement.scrollHeight - (scrollY + window.innerHeight) < 120) {
+                highlightNav(lastSec.id);
+                return;
+            }
+
+            let currentId = null;
+            for (const sec of sections) {
+                if (sec.getBoundingClientRect().top <= headerHeight) {
+                    currentId = sec.id;
+                } else {
+                    break;
+                }
+            }
+            highlightNav(currentId);
+        };
+
+        const highlightNav = (activeId) => {
+            navLinks.forEach(link => {
+                const isMatch = activeId && link.getAttribute('href') === `#${activeId}`;
+                link.classList.toggle('active', !!isMatch);
+            });
+        };
+
+        window.addEventListener('scroll', updateScrollspy, { passive: true });
+        window.addEventListener('resize', updateScrollspy);
+        updateScrollspy();
+
+        // Close mobile menu on link click
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 640) {
+                    mainMenu?.classList.remove('open');
+                    menuBtn?.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // ---------------- Projects Carousel ----------------
+        const track = document.getElementById('projects-track');
+        const slides = [...document.querySelectorAll('.project-card')];
+        const dotsWrap = document.getElementById('projects-dots');
+        const prevBtn = document.getElementById('projects-prev');
+        const nextBtn = document.getElementById('projects-next');
+        const carouselEl = document.getElementById('projects-carousel');
+        let curSlide = 0;
+        const totalSlides = slides.length;
+
+        // Populate dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'carousel-dot';
+            dot.setAttribute('aria-label', `Go to project ${i + 1}`);
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsWrap.appendChild(dot);
+        });
+        const dots = [...dotsWrap.querySelectorAll('.carousel-dot')];
+
+        function renderCarousel() {
+            track.style.transform = `translateX(-${curSlide * 100}%)`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === curSlide));
+            if (prevBtn) prevBtn.disabled = curSlide === 0;
+            if (nextBtn) nextBtn.disabled = curSlide === totalSlides - 1;
+        }
+
+        function goToSlide(i) {
+            curSlide = Math.max(0, Math.min(totalSlides - 1, i));
+            renderCarousel();
+        }
+
+        prevBtn?.addEventListener('click', () => goToSlide(curSlide - 1));
+        nextBtn?.addEventListener('click', () => goToSlide(curSlide + 1));
+
+        // Keyboard arrow support
+        document.addEventListener('keydown', (e) => {
+            const rect = document.getElementById('projects')?.getBoundingClientRect();
+            if (rect && rect.top < window.innerHeight && rect.bottom > 0) {
+                if (e.key === 'ArrowLeft') goToSlide(curSlide - 1);
+                if (e.key === 'ArrowRight') goToSlide(curSlide + 1);
+            }
+        });
+
+        // Touch swipe gestures
+        let touchStartX = 0, touchDiffX = 0, isTouching = false;
+        carouselEl?.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0]?.clientX || 0;
+            touchDiffX = 0;
+            isTouching = true;
+        }, { passive: true });
+        carouselEl?.addEventListener('touchmove', (e) => {
+            if (isTouching) touchDiffX = (e.touches[0]?.clientX || 0) - touchStartX;
+        }, { passive: true });
+        carouselEl?.addEventListener('touchend', () => {
+            if (isTouching) {
+                isTouching = false;
+                if (Math.abs(touchDiffX) > 50) {
+                    goToSlide(touchDiffX < 0 ? curSlide + 1 : curSlide - 1);
+                }
+            }
+        });
+
+        renderCarousel();
+
+        // ---------------- CV Lightbox Modal ----------------
+        const cvDialog = document.getElementById('cv-lightbox');
+        const cvFrame = document.getElementById('cv-lightbox-frame');
+        const cvOpenBtn = document.getElementById('cv-preview-open');
+        const cvCloseBtn = document.getElementById('cv-lightbox-close');
+        const cvUrl = cvDialog?.dataset.resumeUrl || 'Mohamed%20Zaitoun%20Resume.pdf';
+
+        const openCvModal = () => {
+            if (!cvDialog || !cvFrame) return;
+            if (!cvFrame.src) cvFrame.src = cvUrl;
+            cvDialog.showModal();
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeCvModal = () => {
+            if (!cvDialog) return;
+            cvDialog.close();
+            document.body.style.overflow = '';
+        };
+
+        cvOpenBtn?.addEventListener('click', openCvModal);
+        cvCloseBtn?.addEventListener('click', closeCvModal);
+        cvDialog?.addEventListener('click', (e) => {
+            if (e.target === cvDialog) closeCvModal();
+        });
+        cvDialog?.addEventListener('close', () => {
+            document.body.style.overflow = '';
+        });
+    </script>
 </body>
-<!-- <script src="js/bootstrap.js"></script>
-<script src="js/bootstrap.bundle.js"></script>
-<script src="js/bootstrap.bundle.js.map"></script>
-<script src="js/bootstrap.bundle.min.js.map"></script>
-<script src="js/bootstrap.js.map"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.min.js.map"></script>
- -->
-
-
 </html>
