@@ -1,0 +1,14 @@
+<div class="plate-mount">
+  <figure class="workflow-plate" aria-labelledby="hub-business-lines">
+    <figcaption>
+      <div class="slip-header"><span class="slip-name">{{ hub.name }}</span><span class="slip-ref">{{ hub.year }}</span></div>
+      <div class="slip-merchant"><strong id="hub-business-lines">Work by business line</strong></div>
+    </figcaption>
+    <ul class="slip-steps">
+      {% for line in hub.case.businessLines %}
+      <li><span class="slip-dot" aria-hidden="true"></span><div><strong>{{ line.title }}</strong><small>{{ line.body }}</small></div></li>
+      {% endfor %}
+    </ul>
+    <p class="slip-caption">{{ hub.case.coverage }}</p>
+  </figure>
+</div>
