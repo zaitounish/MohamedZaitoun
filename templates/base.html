@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f0e4">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <meta property="og:type" content="{{ 'article' if page == 'case' else 'website' }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="{{ site_url }}/assets/portrait-800.webp">
+  <meta property="og:image:alt" content="Portrait of {{ person.name }}">
+  <link rel="icon" type="image/svg+xml" href="{{ base }}assets/olive-mark.svg">
+  <link rel="stylesheet" href="{{ base }}css/Zaitounish.css">
+</head>
+<body class="page-{{ page }}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="{{ home }}#hero" aria-label="{{ person.handle }} home"><img class="brand-mark" src="{{ base }}assets/olive-mark.svg" alt="" width="36" height="36">{{ person.handle }}</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="{{ home }}#projects">Work</a>
+        <a href="{{ home }}#experience">Experience</a>
+        <a href="{{ base }}resume/"{% if page == 'resume' %} aria-current="page"{% endif %}>Resume</a>
+        <a href="{{ home }}#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    {% block main %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>{{ person.name }} <span aria-hidden="true">·</span> {{ person.handle }}</span>
+      <a href="#main">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>

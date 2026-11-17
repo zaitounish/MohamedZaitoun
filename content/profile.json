@@ -1,0 +1,439 @@
+{
+  "person": {
+    "name": "Mohamed Zaitoun",
+    "handle": "Zaitounish",
+    "headline": "Product engineering for merchant operations",
+    "intro": "I manage merchant accounts and build the software my team uses between calls.",
+    "about": [
+      "People call me Zaitounish, a play on my surname and the word for olive. Before I managed merchant accounts, I sold online ordering and loyalty software to restaurant operators. Those conversations still shape the tools I build.",
+      "At Concentrix, I manage merchant accounts for DoorDash. I also lead the technical work on Merchant Success Hub. Earlier, I built language model applications at Augmentoria and studied data analysis through Udacity."
+    ],
+    "location": ""
+  },
+  "contact": {
+    "email": "work@mohamedzaitoun.com",
+    "phone": "+20 115 813 7422",
+    "website": "https://www.mohamedzaitoun.com",
+    "linkedin": "https://www.linkedin.com/in/zaitounish/",
+    "github": "https://github.com/zaitounish"
+  },
+  "experience": [
+    {
+      "id": "merchant-success-manager",
+      "role": "Merchant Success Manager",
+      "employer": "Concentrix",
+      "client": "DoorDash",
+      "location": "",
+      "start": "October 2025",
+      "end": "Present",
+      "bullets": [
+        "Manage a rotating portfolio of 400+ DoorDash merchant accounts, resolve operational issues and review progress against monthly and quarterly targets.",
+        "Built MSM Markup Tracker to replace manual pricing compliance reports. Markup sales grew 27% quarter over quarter and reached 133% of the quarterly target.",
+        "Built MSM Campaign Dispatcher to prepare tailored merchant campaigns in under 10 minutes. The tool contributed to a 17.9% increase in Concentrix vendor sales."
+      ]
+    },
+    {
+      "id": "saas-sales",
+      "role": "SaaS Sales Representative",
+      "employer": "Concentrix",
+      "client": "DoorDash Commerce Platform",
+      "location": "",
+      "start": "July 2025",
+      "end": "October 2025",
+      "bullets": [
+        "Reached 118% of sales quota selling online ordering, branded mobile apps and loyalty programs to restaurant operators.",
+        "Helped operators choose a setup for their business, from the first conversation through the close. Deal velocity improved by 20%."
+      ]
+    },
+    {
+      "id": "depi-ai",
+      "role": "Generative AI Engineer Trainee",
+      "employer": "Digital Egypt Pioneers Initiative",
+      "client": "",
+      "location": "",
+      "start": "April 2024",
+      "end": "October 2024",
+      "bullets": [
+        "Developed ArtifyAI v1.1, a text-to-image application. Fine-tuned Stable Diffusion on 5,000+ COCO images and integrated T5 to handle prompts in four languages.",
+        "Used MLflow and Hugging Face for experiment tracking and model versioning during a 177-hour AI and machine learning program."
+      ]
+    },
+    {
+      "id": "augmentoria",
+      "role": "AI Engineer",
+      "employer": "Augmentoria",
+      "client": "",
+      "location": "Sweden, remote",
+      "start": "October 2023",
+      "end": "May 2024",
+      "bullets": [
+        "Built and deployed 3+ language model applications with Python and LangChain for business tasks including data extraction and classification.",
+        "Built Gradio interfaces so colleagues could run the applications themselves and give feedback on the results."
+      ]
+    },
+    {
+      "id": "sutherland",
+      "role": "Customer Service Representative",
+      "employer": "Sutherland",
+      "client": "AT&T",
+      "location": "",
+      "start": "November 2022",
+      "end": "October 2023",
+      "bullets": [
+        "Resolved 94% of technical issues on the first call across 1,000+ customer interactions. Maintained a 96% customer satisfaction rating.",
+        "Used Salesforce, VMware and Avaya to troubleshoot customer issues and record the resolution."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "it-degree",
+      "institution": "Egyptian E-Learning University",
+      "credential": "B.Sc. in Information Technology",
+      "status": "Expected 2026"
+    },
+    {
+      "id": "udacity",
+      "institution": "Udacity",
+      "credential": "Data Analysis Nanodegree",
+      "status": "Completed 2023"
+    }
+  ],
+  "skills": [
+    {
+      "label": "Software engineering",
+      "items": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express",
+        "HTML",
+        "CSS",
+        "Azure Functions",
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
+      "label": "Data analysis",
+      "items": [
+        "SQL",
+        "PostgreSQL",
+        "Python",
+        "pandas",
+        "NumPy",
+        "Matplotlib",
+        "Power BI",
+        "Tableau",
+        "A/B testing"
+      ]
+    },
+    {
+      "label": "Applied AI",
+      "items": [
+        "LangChain",
+        "LLMs",
+        "NLP",
+        "Stable Diffusion",
+        "T5",
+        "Hugging Face",
+        "MLflow",
+        "Gradio",
+        "Google Colab"
+      ]
+    },
+    {
+      "label": "Merchant operations",
+      "items": [
+        "B2B SaaS sales",
+        "Account management",
+        "Salesforce",
+        "Campaign operations",
+        "Google Apps Script"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "Arabic",
+      "level": "native"
+    },
+    {
+      "name": "English",
+      "level": "C1"
+    },
+    {
+      "name": "German",
+      "level": "A1"
+    }
+  ],
+  "projects": [
+    {
+      "id": "merchant-success-hub",
+      "name": "Merchant Success Hub",
+      "category": "Merchant operations",
+      "year": "2026",
+      "resumeDescription": "Led technical delivery for Merchant Success Hub, an internal workspace for Concentrix’s DoorDash merchant team. Built portfolio filters and improved how representatives log calls and prepare follow-up emails.",
+      "summary": "An internal workspace for the Concentrix team supporting DoorDash merchants. Representatives can review an account, record a call and prepare the next email in one place.",
+      "details": [
+        "Built portfolio filters and sorting that preserve the representative's view between visits.",
+        "Improved call logging and the workflow for preparing follow-up email drafts. Representatives review each draft before sending it."
+      ],
+      "stack": [
+        "Next.js",
+        "React",
+        "Azure Functions",
+        "PostgreSQL"
+      ],
+      "links": [],
+      "case": {
+        "team": "Concentrix, DoorDash Merchant Success",
+        "context": "Concentrix’s DoorDash Merchant Success team manages ongoing relationships with merchants. Between calls, representatives need to find the right account, see what happened last time and prepare the next conversation.",
+        "role": "Technical lead",
+        "contribution": "I built portfolio filters and sorting, improved how representatives log calls, and worked on the workflow for preparing follow-up email drafts.",
+        "workflow": [
+          {
+            "title": "Find the account",
+            "body": "Filter the portfolio and open the merchant record before the call."
+          },
+          {
+            "title": "Record the conversation",
+            "body": "Log the call against the account so the next person can pick up the thread."
+          },
+          {
+            "title": "Prepare the follow-up",
+            "body": "Create an email draft that the representative can review before sending."
+          }
+        ],
+        "engineering": "Next.js and React power the workspace. Azure Functions and PostgreSQL support the records behind the portfolio and CRM views. Outreach ends with a draft for a representative to review."
+      }
+    },
+    {
+      "id": "msm-markup-tracker",
+      "name": "MSM Markup Tracker",
+      "category": "Merchant operations",
+      "year": "",
+      "summary": "A pricing compliance tool that replaced manual markup reports for the Concentrix team supporting DoorDash.",
+      "details": [
+        "Tracked pricing changes across merchant accounts so the team could review compliance without compiling reports by hand.",
+        "Markup sales grew 27% quarter over quarter and reached 133% of the quarterly target."
+      ],
+      "stack": [
+        "React",
+        "Node.js",
+        "Power BI"
+      ],
+      "links": []
+    },
+    {
+      "id": "msm-campaign-dispatcher",
+      "name": "MSM Campaign Dispatcher",
+      "category": "Merchant operations",
+      "year": "",
+      "summary": "A tool that prepares tailored merchant campaign emails and links in under 10 minutes.",
+      "details": [
+        "Connected a web application to an email drafting workflow using Google Apps Script.",
+        "The tool contributed to a 17.9% increase in Concentrix vendor sales."
+      ],
+      "stack": [
+        "React",
+        "Node.js",
+        "Google Apps Script"
+      ],
+      "links": []
+    },
+    {
+      "id": "artifyai",
+      "name": "ArtifyAI v1.1",
+      "category": "Applied AI",
+      "year": "2024",
+      "summary": "A text-to-image application for prompts in English, German, Romanian and French.",
+      "details": [
+        "Fine-tuned Stable Diffusion on 5,000+ COCO images and integrated T5 for multilingual prompts."
+      ],
+      "stack": [
+        "Python",
+        "Stable Diffusion",
+        "T5",
+        "Hugging Face"
+      ],
+      "links": [
+        {
+          "label": "Model on Hugging Face",
+          "url": "https://huggingface.co/ImageInception/ArtifyAI-v1.1"
+        }
+      ]
+    },
+    {
+      "id": "ab-test-analysis",
+      "name": "Analyze A/B Test Results",
+      "category": "Data analysis",
+      "year": "2024",
+      "summary": "Tested whether a new ecommerce landing page increased conversions using hypothesis testing and regression.",
+      "details": [
+        "Compared conversion rates for the original and updated pages in a Jupyter notebook."
+      ],
+      "stack": [
+        "Python",
+        "Statistics",
+        "A/B testing"
+      ],
+      "links": [
+        {
+          "label": "Notebook on GitHub",
+          "url": "https://github.com/zaitounish/Analyze-A-B-Test-Results"
+        }
+      ]
+    },
+    {
+      "id": "rag-semantic-search",
+      "name": "Train RAG SemanticSearch",
+      "category": "Applied AI",
+      "year": "2024",
+      "summary": "A notebook that breaks a machine learning text into passages and retrieves relevant passages by similarity.",
+      "details": [
+        "Created embeddings for the passages and indexed them in Chroma for search with LangChain."
+      ],
+      "stack": [
+        "Python",
+        "LangChain",
+        "Chroma",
+        "Embeddings"
+      ],
+      "links": [
+        {
+          "label": "Notebook on Hugging Face",
+          "url": "https://huggingface.co/Zaitounish/Train-RAG-SemanticSearch/tree/main"
+        }
+      ]
+    },
+    {
+      "id": "hypothetical-document-embeddings",
+      "name": "Hypothetical Document Embeddings",
+      "category": "Applied AI",
+      "year": "2024",
+      "summary": "A notebook exploring how a generated example answer can help retrieve relevant passages from hotel reviews.",
+      "details": [
+        "Used LangChain to generate a hypothetical answer and embed it as a search query."
+      ],
+      "stack": [
+        "Python",
+        "LangChain",
+        "Embeddings"
+      ],
+      "links": [
+        {
+          "label": "Notebook on Hugging Face",
+          "url": "https://huggingface.co/Zaitounish/Hypothetical_Document_Embeddings/tree/main"
+        }
+      ]
+    },
+    {
+      "id": "us-census",
+      "name": "US Census Demographic Data",
+      "category": "Data analysis",
+      "year": "2022",
+      "summary": "Built two Tableau dashboards and a visual story from 2015 US county data to explore population, poverty and transportation.",
+      "details": [
+        "Documented the design decisions behind each view and compared poverty with unemployment across counties."
+      ],
+      "stack": [
+        "Tableau",
+        "Data visualization"
+      ],
+      "links": [
+        {
+          "label": "Project on GitHub",
+          "url": "https://github.com/zaitounish/US-Census-Demographic-Data-Tableau"
+        }
+      ]
+    },
+    {
+      "id": "no-show-appointments",
+      "name": "No Show Appointments",
+      "category": "Data analysis",
+      "year": "2022",
+      "summary": "Explored more than 100,000 medical appointments in Brazil to identify patterns in attendance.",
+      "details": [
+        "Used pandas and Matplotlib to examine appointment histories and characteristics associated with missed visits."
+      ],
+      "stack": [
+        "Python",
+        "pandas",
+        "NumPy",
+        "Matplotlib"
+      ],
+      "links": [
+        {
+          "label": "Notebook on GitHub",
+          "url": "https://github.com/zaitounish/Investigate-a-Dataset-No-show-appointments-"
+        }
+      ]
+    },
+    {
+      "id": "us-bikeshare",
+      "name": "Explore US Bikeshare Data",
+      "category": "Data analysis",
+      "year": "2022",
+      "summary": "Compared trip duration, popular stations and travel times across Chicago, New York City and Washington, DC.",
+      "details": [
+        "Wrote a Python program to calculate descriptive statistics from each city's bike share records."
+      ],
+      "stack": [
+        "Python",
+        "NumPy",
+        "Exploratory data analysis"
+      ],
+      "links": [
+        {
+          "label": "Code on GitHub",
+          "url": "https://github.com/zaitounish/Explore-US-Bikeshare-Data"
+        }
+      ]
+    },
+    {
+      "id": "digital-music-store",
+      "name": "Query a Digital Music Store",
+      "category": "Data analysis",
+      "year": "2022",
+      "summary": "Used SQL to answer four business questions about a digital music store, its customers and its invoices.",
+      "details": [
+        "Queried a relational music store database to examine media sales and purchasing behavior."
+      ],
+      "stack": [
+        "SQL",
+        "Relational databases"
+      ],
+      "links": [
+        {
+          "label": "Queries on GitHub",
+          "url": "https://github.com/zaitounish/Query-a-Digital-Music-Store-Database"
+        }
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Ahmed Assal",
+      "role": "Technical Team Manager at Augmentoria",
+      "quote": "Mohamed's contributions as an AI Engineer were instrumental in pushing our projects to success. His expertise in developing AI models and collaborating with cross-functional teams was evident in every task he handled. His ability to innovate and optimize machine learning algorithms helped us achieve better performance and faster results. Mohamed's dedication and problem-solving skills are truly commendable."
+    },
+    {
+      "name": "Labib Darwish",
+      "role": "Team Lead at Sutherland AT&T MSS",
+      "quote": "As a Customer Service Representative, Mohamed consistently exceeded expectations. His ability to quickly build rapport with customers and resolve their issues was impressive. His work ethic and commitment to maintaining high customer satisfaction rates played a crucial role in our team's success. Mohamed's proactive approach and attention to detail make him an asset to any team."
+    }
+  ],
+  "resume": {
+    "headline": "Product engineering, merchant operations and applied AI",
+    "summary": "I build software for merchant operations, drawing on experience in B2B sales and data analysis. My work ranges from pricing tools for account managers to language model applications for business teams.",
+    "featuredProject": "merchant-success-hub",
+    "selectedProjects": [
+      "ab-test-analysis",
+      "us-census",
+      "rag-semantic-search"
+    ]
+  }
+}

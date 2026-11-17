@@ -1,0 +1,5 @@
+.venv/
+dist/
+/Mohamed Zaitoun Resume.pdf
+__pycache__/
+*.pyc

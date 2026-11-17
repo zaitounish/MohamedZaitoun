@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block main %}
+  <div class="page-head shell">
+    <a class="back-link" href="{{ home }}#hero">Back to portfolio</a>
+    <p class="eyebrow">Resume</p>
+    <h1 class="display">{{ person.name }}</h1>
+    <p class="lead">{{ resume.headline }}</p>
+    <p class="actions"><a class="button" href="{{ base }}{{ pdf_url }}" download>Download PDF</a></p>
+  </div>
+  <article class="resume-sheet shell" aria-label="Resume for {{ person.name }}">
+    {% for row in resume_rows %}
+      {% if row.kind == 'contact' %}
+      <div class="resume-contact">
+        {% for link in row.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% if not loop.last %}<span aria-hidden="true"> · </span>{% endif %}{% endfor %}
+      </div>
+      {% elif row.kind == 'section' %}<h2 class="resume-section">{{ row.text }}</h2>
+      {% elif row.kind == 'subhead' %}
+      <h3 class="resume-entry">{% if row.url is defined %}<a href="{{ row.url }}">{{ row.text }}</a>{% else %}{{ row.text }}{% endif %}</h3>
+      {% elif row.kind == 'meta' %}<p class="entry-period">{{ row.text }}</p>
+      {% elif row.kind == 'list' %}<ul>{% for bullet in row.bullets %}<li>{{ bullet }}</li>{% endfor %}</ul>
+      {% elif row.kind in ['text', 'summary'] %}<p>{{ row.text }}</p>
+      {% endif %}
+    {% endfor %}
+    <p class="actions"><a class="text-link" href="{{ base }}work/merchant-success-hub/">Read the Merchant Success Hub case study</a></p>
+  </article>
+{% endblock %}
