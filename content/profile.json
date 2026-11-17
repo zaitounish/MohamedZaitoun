@@ -3,7 +3,7 @@
     "name": "Mohamed Zaitoun",
     "handle": "Zaitounish",
     "headline": "Product engineering for merchant operations",
-    "intro": "I manage merchant accounts and build the software my team uses between calls.",
+    "intro": "I manage merchant accounts and build tools for the reps and operations teams who support them.",
     "about": [
       "People call me Zaitounish, a play on my surname and the word for olive. Before I managed merchant accounts, I sold online ordering and loyalty software to restaurant operators. Those conversations still shape the tools I build.",
       "At Concentrix, I manage merchant accounts for DoorDash. I also lead the technical work on Merchant Success Hub. Earlier, I built language model applications at Augmentoria and studied data analysis through Udacity."
@@ -175,11 +175,11 @@
       "name": "Merchant Success Hub",
       "category": "Merchant operations",
       "year": "2026",
-      "resumeDescription": "Led technical delivery for Merchant Success Hub, an internal workspace for Concentrix’s DoorDash merchant team. Built portfolio filters and improved how representatives log calls and prepare follow-up emails.",
-      "summary": "An internal workspace for the Concentrix team supporting DoorDash merchants. Representatives can review an account, record a call and prepare the next email in one place.",
+      "resumeDescription": "Led technical delivery of Merchant Success Hub, a multi-tenant operations platform serving three lines of business in Concentrix’s DoorDash program. Brought portfolio management, campaign tools, claim review and performance reporting into one application, with access scoped by role, team and account ownership.",
+      "summary": "Concentrix’s DoorDash reps use the Hub to prioritize merchants, prepare campaigns and track their targets. Operations leads use the same platform to assign accounts, validate reps’ claims for completed work and see where their teams need support.",
       "details": [
-        "Built portfolio filters and sorting that preserve the representative's view between visits.",
-        "Improved call logging and the workflow for preparing follow-up email drafts. Representatives review each draft before sending it."
+        "Built portfolio filters and saved views so reps can pick up where they left off.",
+        "The Hub supports weekly business reviews with portfolio coverage, rep pacing and promotion results."
       ],
       "stack": [
         "Next.js",
@@ -190,24 +190,26 @@
       "links": [],
       "case": {
         "team": "Concentrix, DoorDash Merchant Success",
-        "context": "Concentrix’s DoorDash Merchant Success team manages ongoing relationships with merchants. Between calls, representatives need to find the right account, see what happened last time and prepare the next conversation.",
+        "context": "A store can have one rep helping it grow and a different rep responsible for retention. When assignments, targets and results lived in separate spreadsheets, team leads had to piece together who owned the work and which merchants needed attention.",
         "role": "Technical lead",
-        "contribution": "I built portfolio filters and sorting, improved how representatives log calls, and worked on the workflow for preparing follow-up email drafts.",
-        "workflow": [
+        "contribution": "I led technical delivery across account management, early merchant support and retention. We built one multi-tenant platform that gives each line of business its own queues, fields and account owners. My work included the saved portfolio views reps use to return to the accounts they’re prioritizing.",
+        "businessLines": [
           {
-            "title": "Find the account",
-            "body": "Filter the portfolio and open the merchant record before the call."
+            "title": "Account management",
+            "body": "Find merchants that need outreach, prepare a targeted promotion and see the daily pace needed to reach a monthly goal."
           },
           {
-            "title": "Record the conversation",
-            "body": "Log the call against the account so the next person can pick up the thread."
+            "title": "Early merchant support",
+            "body": "Use early sales, menu and promotion data to spot a growth opportunity for a newly active merchant."
           },
           {
-            "title": "Prepare the follow-up",
-            "body": "Create an email draft that the representative can review before sending."
+            "title": "Retention",
+            "body": "See why a store went inactive, identify the right contact and track progress toward reactivation."
           }
         ],
-        "engineering": "Next.js and React power the workspace. Azure Functions and PostgreSQL support the records behind the portfolio and CRM views. Outreach ends with a draft for a representative to review."
+        "coverage": "Team leads can review coverage and results across the portfolios they oversee.",
+        "operations": "For a weekly business review, a team lead can see which accounts have yet to receive outreach, compare each rep’s pace against target and review promotion results. They can then decide where to shift work and reassign accounts within their team.",
+        "engineering": "The active line of business determines which fields and tools appear. Role, team and account assignment determine which data a person can access. The API and PostgreSQL enforce those boundaries for portfolios and reporting. When ownership changes, the merchant’s history stays with the store."
       }
     },
     {

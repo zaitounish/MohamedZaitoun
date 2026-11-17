@@ -205,7 +205,11 @@ def check_outputs(output, profile):
     hub = next((project for project in profile["projects"] if project["id"] == "merchant-success-hub"), None)
     if not hub:
         raise ValueError("Profile is missing the Merchant Success Hub case study")
-    check_order(pages[CASE], [hub["name"], hub["summary"]], "Hub case study")
+    case = hub["case"]
+    business_lines = [text for line in case["businessLines"] for text in (line["title"], line["body"])]
+    for name in (HOME, CASE):
+        check_order(pages[name], [hub["summary"], case["contribution"], *business_lines, case["coverage"]], name)
+    check_order(pages[CASE], [case["context"], case["operations"], case["engineering"]], "Hub case study")
     roles = [entry["role"] for entry in profile["experience"]]
     for label, text in {HOME: pages[HOME], RESUME: pages[RESUME], "Resume documents": clean_text(docx)}.items():
         check_order(text, [hub["name"]], label)
