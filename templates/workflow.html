@@ -1,0 +1,12 @@
+<div class="plate-mount">
+  <figure class="workflow-plate" aria-label="Illustrated merchant workflow">
+    <div class="slip-header"><span class="slip-name">Merchant record</span><span class="slip-ref">Sample</span></div>
+    <div class="slip-merchant"><span class="slip-label">Account</span><strong>Olive Street Kitchen</strong></div>
+    <ol class="slip-steps">
+      {% for step in hub.case.workflow %}
+      <li><span class="slip-dot" aria-hidden="true"></span><div><strong>{{ step.title }}</strong><small>{{ step.body }}</small></div></li>
+      {% endfor %}
+    </ol>
+    <figcaption class="slip-caption">Illustrated workflow with a fictional merchant.</figcaption>
+  </figure>
+</div>
