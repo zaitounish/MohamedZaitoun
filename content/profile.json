@@ -175,11 +175,11 @@
       "name": "Merchant Success Hub",
       "category": "Merchant operations",
       "year": "2026",
-      "resumeDescription": "Led technical delivery of Merchant Success Hub, a multi-tenant operations platform serving three lines of business in Concentrix’s DoorDash program. Brought portfolio management, campaign tools, claim review and performance reporting into one application, with access scoped by role, team and account ownership.",
-      "summary": "Concentrix’s DoorDash reps use the Hub to prioritize merchants, prepare campaigns and track their targets. Operations leads use the same platform to assign accounts, validate reps’ claims for completed work and see where their teams need support.",
+      "resumeDescription": "Led technical delivery of a multi-tenant sales operations platform for three lines of business in Concentrix’s DoorDash program. Built React portfolio views and used Azure Functions and PostgreSQL row-level security to scope access by role and assignment. Account management’s weekly report preserves sales credit through team transfers and compares validated claims with official sales.",
+      "summary": "At Concentrix, I manage merchant accounts for DoorDash and lead technical delivery of Merchant Success Hub. We brought three lines of business onto one platform. Reps can find the next merchant opportunity. Operations leads can see which stores still need outreach, where staffing falls short and how validated wins compare with official sales.",
       "details": [
-        "Built portfolio filters and saved views so reps can pick up where they left off.",
-        "The Hub supports weekly business reviews with portfolio coverage, rep pacing and promotion results."
+        "Built portfolio filtering and saved views on a shared platform for account management, early merchant support and retention.",
+        "Account management’s weekly report compares validated sales claims with official results and uses historical assignments to attribute credit."
       ],
       "stack": [
         "Next.js",
@@ -190,26 +190,52 @@
       "links": [],
       "case": {
         "team": "Concentrix, DoorDash Merchant Success",
-        "context": "A store can have one rep helping it grow and a different rep responsible for retention. When assignments, targets and results lived in separate spreadsheets, team leads had to piece together who owned the work and which merchants needed attention.",
         "role": "Technical lead",
-        "contribution": "I led technical delivery across account management, early merchant support and retention. We built one multi-tenant platform that gives each line of business its own queues, fields and account owners. My work included the saved portfolio views reps use to return to the accounts they’re prioritizing.",
-        "businessLines": [
+        "contribution": "Account management, early merchant support and retention work distinct portfolios and measure progress differently. Our multi-tenant design lets the same store have a different rep in each business line. Teams can hand over a portfolio while keeping last week’s sales credit with the people who earned it.",
+        "story": [
           {
-            "title": "Account management",
-            "body": "Find merchants that need outreach, prepare a targeted promotion and see the daily pace needed to reach a monthly goal."
+            "title": "The problem behind the spreadsheets",
+            "paragraphs": [
+              "Portfolios and targets lived in spreadsheets. Reps prepared merchant campaigns in a separate tool, and team leads reconciled the team’s submissions with official sales figures for the weekly review. Even a simple question took work. If a rep moved teams midmonth, which team should get credit for an earlier sale?",
+              "We kept the spreadsheet interface reps knew and connected it to the work each team actually does. Account managers can select eligible merchants for a promotion. Early merchant support can spot gaps in a new store’s menu or promotions. Retention reps can track an inactive store through reactivation."
+            ]
           },
           {
-            "title": "Early merchant support",
-            "body": "Use early sales, menu and promotion data to spot a growth opportunity for a newly active merchant."
+            "title": "Engineering for three lines of business",
+            "paragraphs": [
+              "In the Hub’s multi-tenant data model, a store can have one active owner per line of business. A restaurant with several locations can have a different rep for each store, and a store can have both an account manager and a retention rep. Dated assignments let a new rep take over the account while preserving the history of who owned it.",
+              "I built portfolio filters and saved views in React using AG Grid. Microsoft Entra ID handles sign-in. Azure Functions and PostgreSQL row-level security enforce access by line of business, role and assignment. Reps can work their own accounts, and team leads can see the portfolios they oversee. The grid can fetch only what changed when a rep returns to a large portfolio."
+            ]
           },
           {
-            "title": "Retention",
-            "body": "See why a store went inactive, identify the right contact and track progress toward reactivation."
+            "title": "From a merchant opportunity to a reviewed result",
+            "paragraphs": [
+              "Reps can prepare personalized campaign drafts for the merchants they select and see the daily pace needed to reach their monthly target. Pricing work has a different measure of success. The Markup Tracker uses dated pricing exports to check whether a store reduced its menu markup and whether the reduction held for 30 days.",
+              "In the sales claims pilot, a reviewer can inspect a submission and approve it, reject it or flag it for follow-up. A team lead looking at a gap against target can see which wins are still awaiting review before deciding where a rep needs coaching."
+            ]
+          },
+          {
+            "title": "What changed for operations and BI",
+            "paragraphs": [
+              "When outreach falls behind, operations leads can see which stores still need attention and check the staffing view for a gap in coverage. For the weekly account management review, business intelligence analysts can compare validated claims with official sales by product or team. The report uses the rep’s team on the date of the sale, so a transfer preserves earlier sales credit.",
+              "Leadership already ran its reviews in Google Sheets. We gave authorized reporting leads a way to publish the current week’s figures to the same workbook. The workbook pulls the report, checks the values it wrote and acknowledges delivery. A lead can resend a corrected report without copying totals by hand or duplicating entries."
+            ]
           }
         ],
-        "coverage": "Team leads can review coverage and results across the portfolios they oversee.",
-        "operations": "For a weekly business review, a team lead can see which accounts have yet to receive outreach, compare each rep’s pace against target and review promotion results. They can then decide where to shift work and reassign accounts within their team.",
-        "engineering": "The active line of business determines which fields and tools appear. Role, team and account assignment determine which data a person can access. The API and PostgreSQL enforce those boundaries for portfolios and reporting. When ownership changes, the merchant’s history stays with the store."
+        "evidence": [
+          {
+            "title": "Portfolio handoffs",
+            "body": "After a production reassignment, we checked 25 stores against their assignment histories. All 25 had the expected owner."
+          },
+          {
+            "title": "Weekly reporting",
+            "body": "In production, sending the same week’s report four times left exactly two distinct records in the workbook log. The retries added no duplicates."
+          },
+          {
+            "title": "Spreadsheet performance",
+            "body": "In a browser test with 55,000 synthetic rows, resizing a column previously triggered 20 storage writes. The updated grid wrote once, when the rep released the column."
+          }
+        ]
       }
     },
     {
