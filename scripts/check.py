@@ -212,7 +212,7 @@ def check_outputs(output, profile):
         story.append(section["title"])
         story.extend(section["paragraphs"])
     check_order(pages[HOME], [hub["summary"], case["contribution"], spotlight["title"], *spotlight["paragraphs"]], HOME)
-    check_order(pages[CASE], [hub["summary"], *story], CASE)
+    check_order(pages[CASE], [case["intro"], *story], CASE)
     roles = [entry["role"] for entry in profile["experience"]]
     for label, text in {HOME: pages[HOME], RESUME: pages[RESUME], "Resume documents": clean_text(docx)}.items():
         check_order(text, [hub["name"]], label)

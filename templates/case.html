@@ -4,7 +4,7 @@
     <a class="back-link" href="{{ home }}#projects">Back to work</a>
     <p class="eyebrow">Case study{% if hub.year %} <span aria-hidden="true">/</span> {{ hub.year }}{% endif %}</p>
     <h1 class="display">{{ hub.name }}</h1>
-    <p class="lead">{{ hub.summary }}</p>
+    <p class="lead">{{ hub.case.intro }}</p>
   </div>
   <div class="reading-grid shell">
     <aside class="case-facts" aria-label="Project details">
