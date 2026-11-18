@@ -26,7 +26,14 @@
         <p>{{ hub.case.contribution }}</p>
         <a class="text-link" href="{{ base }}work/merchant-success-hub/">Read the case study</a>
       </div>
-      {% include "hub-results.html" %}
+      <aside class="plate-mount" aria-labelledby="hub-sales-example">
+        <div class="sales-example">
+          <h3 id="hub-sales-example">{{ hub.case.spotlight.title }}</h3>
+          {% for paragraph in hub.case.spotlight.paragraphs %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
+        </div>
+      </aside>
     </div>
   </section>
   <section id="work-index" class="section shell" aria-labelledby="more-work">

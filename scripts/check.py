@@ -206,13 +206,13 @@ def check_outputs(output, profile):
     if not hub:
         raise ValueError("Profile is missing the Merchant Success Hub case study")
     case = hub["case"]
-    evidence = [text for result in case["evidence"] for text in (result["title"], result["body"])]
+    spotlight = case["spotlight"]
     story = []
     for section in case["story"]:
         story.append(section["title"])
         story.extend(section["paragraphs"])
-    check_order(pages[HOME], [hub["summary"], case["contribution"], *evidence], HOME)
-    check_order(pages[CASE], [hub["summary"], *story, *evidence], CASE)
+    check_order(pages[HOME], [hub["summary"], case["contribution"], spotlight["title"], *spotlight["paragraphs"]], HOME)
+    check_order(pages[CASE], [hub["summary"], *story], CASE)
     roles = [entry["role"] for entry in profile["experience"]]
     for label, text in {HOME: pages[HOME], RESUME: pages[RESUME], "Resume documents": clean_text(docx)}.items():
         check_order(text, [hub["name"]], label)

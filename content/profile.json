@@ -176,7 +176,7 @@
       "category": "Merchant operations",
       "year": "2026",
       "resumeDescription": "Led technical delivery of a multi-tenant sales operations platform for three lines of business in Concentrix’s DoorDash program. Built React portfolio views and used Azure Functions and PostgreSQL row-level security to scope access by role and assignment. Account management’s weekly report preserves sales credit through team transfers and compares validated claims with official sales.",
-      "summary": "At Concentrix, I manage merchant accounts for DoorDash and lead technical delivery of Merchant Success Hub. We brought three lines of business onto one platform. Reps can find the next merchant opportunity. Operations leads can see which stores still need outreach, where staffing falls short and how validated wins compare with official sales.",
+      "summary": "I led technical delivery of a sales platform for three DoorDash merchant teams at Concentrix, drawing on my own work as an account manager. Reps can turn a portfolio into a targeted campaign without rebuilding a merchant list. Managers can see where outreach is falling behind and redirect their team before month-end.",
       "details": [
         "Built portfolio filtering and saved views on a shared platform for account management, early merchant support and retention.",
         "Account management’s weekly report compares validated sales claims with official results and uses historical assignments to attribute credit."
@@ -191,49 +191,42 @@
       "case": {
         "team": "Concentrix, DoorDash Merchant Success",
         "role": "Technical lead",
-        "contribution": "Account management, early merchant support and retention work distinct portfolios and measure progress differently. Our multi-tenant design lets the same store have a different rep in each business line. Teams can hand over a portfolio while keeping last week’s sales credit with the people who earned it.",
+        "contribution": "Account management, early merchant support and retention each use the Hub differently. A missing menu photo gives a rep a reason to reach out to a new restaurant. For a retention rep, success means helping an inactive store take orders again. Both teams keep ownership of their work, even when they support the same merchant.",
+        "spotlight": {
+          "title": "Where should a sales lead step in?",
+          "paragraphs": [
+            "Halfway through the month, two reps can be equally far from target for different reasons. One still has eligible stores that haven’t been approached. The other has submitted wins that are waiting for review.",
+            "The Hub gives the lead enough context to act. They can help the first rep choose merchants for outreach and get the second rep’s claims in front of a reviewer while there’s still time to influence the month."
+          ]
+        },
         "story": [
           {
-            "title": "The problem behind the spreadsheets",
+            "title": "From a merchant list to a sales opportunity",
             "paragraphs": [
-              "Portfolios and targets lived in spreadsheets. Reps prepared merchant campaigns in a separate tool, and team leads reconciled the team’s submissions with official sales figures for the weekly review. Even a simple question took work. If a rep moved teams midmonth, which team should get credit for an earlier sale?",
-              "We kept the spreadsheet interface reps knew and connected it to the work each team actually does. Account managers can select eligible merchants for a promotion. Early merchant support can spot gaps in a new store’s menu or promotions. Retention reps can track an inactive store through reactivation."
+              "Portfolios and targets lived in spreadsheets, campaign preparation happened in a separate tool, and weekly reviews meant reconciling what reps submitted with official sales figures. I built the Hub’s portfolio views around the question I faced as an account manager. Which merchant has a reason to hear from me today?",
+              "An account manager can filter for promotion eligibility and prepare personalized outreach for the stores they select. Early merchant support uses menu and promotion data to find gaps at new restaurants. Retention reps follow inactive stores through reactivation. The teams share a platform, and each has a clear definition of a win."
             ]
           },
           {
-            "title": "Engineering for three lines of business",
+            "title": "One store, different owners",
             "paragraphs": [
-              "In the Hub’s multi-tenant data model, a store can have one active owner per line of business. A restaurant with several locations can have a different rep for each store, and a store can have both an account manager and a retention rep. Dated assignments let a new rep take over the account while preserving the history of who owned it.",
-              "I built portfolio filters and saved views in React using AG Grid. Microsoft Entra ID handles sign-in. Azure Functions and PostgreSQL row-level security enforce access by line of business, role and assignment. Reps can work their own accounts, and team leads can see the portfolios they oversee. The grid can fetch only what changed when a rep returns to a large portfolio."
+              "A restaurant can have several stores. The same store can have both an account manager and a retention rep. We designed the Hub’s multi-tenant data model around that reality. Each line of business owns its assignments. When a portfolio changes hands, dated assignments preserve who was responsible for each store before and after the transfer.",
+              "I built the portfolio filters and saved views in React so reps could keep the spreadsheet workflow they knew. Azure Functions and PostgreSQL enforce access by role, team and assignment. That gives a lead a view across their team’s accounts while each rep works their own portfolio."
             ]
           },
           {
-            "title": "From a merchant opportunity to a reviewed result",
+            "title": "Managing the sales floor before month-end",
             "paragraphs": [
-              "Reps can prepare personalized campaign drafts for the merchants they select and see the daily pace needed to reach their monthly target. Pricing work has a different measure of success. The Markup Tracker uses dated pricing exports to check whether a store reduced its menu markup and whether the reduction held for 30 days.",
-              "In the sales claims pilot, a reviewer can inspect a submission and approve it, reject it or flag it for follow-up. A team lead looking at a gap against target can see which wins are still awaiting review before deciding where a rep needs coaching."
+              "Team leads can see whether each rep is on pace for the month, which stores still need outreach and who is on shift to cover them. That gives a lead a practical choice during the week. They can coach a rep on their next promotion or move coverage to an overlooked group of merchants.",
+              "The sales claims pilot also distinguishes work awaiting review from approved wins. For pricing work, the Hub tracks whether a merchant’s lower menu markup held for 30 days. That gives a lead a basis for coaching on the outcome of the offer as well as the initial sale."
             ]
           },
           {
-            "title": "What changed for operations and BI",
+            "title": "Sales figures leadership can explain",
             "paragraphs": [
-              "When outreach falls behind, operations leads can see which stores still need attention and check the staffing view for a gap in coverage. For the weekly account management review, business intelligence analysts can compare validated claims with official sales by product or team. The report uses the rep’s team on the date of the sale, so a transfer preserves earlier sales credit.",
-              "Leadership already ran its reviews in Google Sheets. We gave authorized reporting leads a way to publish the current week’s figures to the same workbook. The workbook pulls the report, checks the values it wrote and acknowledges delivery. A lead can resend a corrected report without copying totals by hand or duplicating entries."
+              "For the weekly account management review, business intelligence analysts can compare validated wins with official sales and narrow a difference to a team or product. Reporting leads publish the current week’s figures straight to the Google Sheets workbook leadership already uses. That removes the step of copying totals by hand.",
+              "We also separated who owns an account today from who earned a sale. If a rep moves teams on Friday, Tuesday’s sale still counts for the team that earned it. Managers can move people where merchants need them and still give a fair account of each team’s performance."
             ]
-          }
-        ],
-        "evidence": [
-          {
-            "title": "Portfolio handoffs",
-            "body": "After a production reassignment, we checked 25 stores against their assignment histories. All 25 had the expected owner."
-          },
-          {
-            "title": "Weekly reporting",
-            "body": "In production, sending the same week’s report four times left exactly two distinct records in the workbook log. The retries added no duplicates."
-          },
-          {
-            "title": "Spreadsheet performance",
-            "body": "In a browser test with 55,000 synthetic rows, resizing a column previously triggered 20 storage writes. The updated grid wrote once, when the rep released the column."
           }
         ]
       }
