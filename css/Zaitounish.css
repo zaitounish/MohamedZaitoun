@@ -519,15 +519,6 @@ a:hover {
 .slip-steps strong { font-size: 1rem; line-height: 1.25; font-weight: 650; }
 .slip-steps small { margin-top: .1rem; color: var(--muted); font-size: .87rem; line-height: 1.35; }
 
-.slip-caption {
-    margin-top: .5rem;
-    padding-top: .55rem;
-    border-top: 1px solid var(--olive);
-    color: var(--muted);
-    font-size: .82rem;
-    line-height: 1.4;
-}
-
 .portrait::after {
     content: "";
     position: absolute;
