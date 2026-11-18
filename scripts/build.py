@@ -60,7 +60,7 @@ def render_site(profile, site):
     }
     pages = (
         ("home", "index.html", "", f"{person['name']} | {person['handle']}", person["intro"]),
-        ("case", "case.html", "work/merchant-success-hub/", f"{hub['name']} | {person['name']}", hub["summary"]),
+        ("case", "case.html", "work/merchant-success-hub/", f"{hub['name']} | {person['name']}", hub["case"]["intro"]),
         ("resume", "resume.html", "resume/", f"Resume | {person['name']}", profile["resume"]["summary"]),
     )
     for page, template, route, title, description in pages:
