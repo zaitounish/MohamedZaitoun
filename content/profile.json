@@ -175,10 +175,10 @@
       "name": "Merchant Success Hub",
       "category": "Merchant operations",
       "year": "2026",
-      "resumeDescription": "Led technical delivery of a multi-tenant sales operations platform for three lines of business in Concentrix’s DoorDash program. Built React portfolio views and used Azure Functions and PostgreSQL row-level security to scope access by role and assignment. Account management’s weekly report preserves sales credit through team transfers and compares validated claims with official sales.",
-      "summary": "I led technical delivery of a sales platform for three DoorDash merchant teams at Concentrix, drawing on my own work as an account manager. Reps can turn a portfolio into a targeted campaign without rebuilding a merchant list. Managers can see where outreach is falling behind and redirect their team before month-end.",
+      "resumeDescription": "Led technical delivery of a multi-tenant sales operations platform serving multiple lines of business in Concentrix’s DoorDash program. Built React portfolio views and used Azure Functions and PostgreSQL row-level security to scope access by role and assignment. Account management’s weekly report preserves sales credit through team transfers and compares validated claims with official sales.",
+      "summary": "I led technical delivery of a shared sales platform for DoorDash merchant teams at Concentrix, drawing on my own work as an account manager. Reps can turn a portfolio into a targeted campaign without rebuilding a merchant list. Managers can see where outreach is falling behind and redirect their team before month-end.",
       "details": [
-        "Built portfolio filtering and saved views on a shared platform for account management, early merchant support and retention.",
+        "Built portfolio filtering and saved views for merchant teams across lines of business.",
         "Account management’s weekly report compares validated sales claims with official results and uses historical assignments to attribute credit."
       ],
       "stack": [
@@ -191,7 +191,7 @@
       "case": {
         "team": "Concentrix, DoorDash Merchant Success",
         "role": "Technical lead",
-        "contribution": "Account management, early merchant support and retention each use the Hub differently. A missing menu photo gives a rep a reason to reach out to a new restaurant. For a retention rep, success means helping an inactive store take orders again. Both teams keep ownership of their work, even when they support the same merchant.",
+        "contribution": "The Hub supports multiple lines of business, each with its own merchant goals. A missing menu photo gives an early merchant support rep a reason to reach out to a new restaurant. For a retention rep, success means helping an inactive store take orders again. Each team keeps ownership of its work, even when teams support the same merchant.",
         "spotlight": {
           "title": "Where should a sales lead step in?",
           "paragraphs": [
@@ -204,7 +204,7 @@
             "title": "From a merchant list to a sales opportunity",
             "paragraphs": [
               "Portfolios and targets lived in spreadsheets, campaign preparation happened in a separate tool, and weekly reviews meant reconciling what reps submitted with official sales figures. I built the Hub’s portfolio views around the question I faced as an account manager. Which merchant has a reason to hear from me today?",
-              "An account manager can filter for promotion eligibility and prepare personalized outreach for the stores they select. Early merchant support uses menu and promotion data to find gaps at new restaurants. Retention reps follow inactive stores through reactivation. The teams share a platform, and each has a clear definition of a win."
+              "The work varies by line of business. For example, an account manager can filter for promotion eligibility and prepare personalized outreach for the stores they select. Early merchant support uses menu and promotion data to find gaps at new restaurants. Retention reps follow inactive stores through reactivation. Each team has a clear definition of a win."
             ]
           },
           {
