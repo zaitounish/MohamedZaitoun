@@ -439,85 +439,31 @@ a:hover {
     border-inline: 1px solid #68745b;
 }
 
-.workflow-plate {
+.sales-example {
     width: 100%;
     max-width: 30rem;
     min-width: 0;
     margin: 0;
     padding: clamp(1rem, 2.15vw, 2rem);
-    border: 1px solid #a6a792;
     background-color: var(--sheet);
     color: var(--ink);
-}
-
-.plate-mount > .workflow-plate {
-    border-color: transparent;
     box-shadow: .28rem .36rem 0 rgba(34, 44, 29, .5);
 }
 
-.slip-header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: .6rem;
-    padding-bottom: .55rem;
+.sales-example h3 {
+    margin: 0;
+    padding-bottom: .85rem;
     border-bottom: 3px double var(--olive);
-}
-
-.slip-name,
-.slip-label,
-.slip-ref {
-    font-size: .72rem;
-    font-weight: 650;
-    line-height: 1.3;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-}
-
-.slip-name { color: var(--olive); }
-.slip-ref, .slip-label { color: var(--muted); }
-
-.slip-merchant {
-    display: grid;
-    gap: .15rem;
-    margin: 1.05rem 0 .8rem;
-}
-
-.slip-merchant strong {
-    font: 400 clamp(1.4rem, 2.25vw, 2rem)/1.13 var(--serif);
+    font: 400 clamp(1.7rem, 2.5vw, 2.5rem)/1.12 var(--serif);
     letter-spacing: -.035em;
+    text-wrap: balance;
 }
 
-.slip-steps {
-    padding: 0;
-    list-style: none;
+.sales-example p {
+    margin-top: .85rem;
+    line-height: 1.55;
+    text-wrap: pretty;
 }
-
-.slip-steps li {
-    position: relative;
-    display: grid;
-    grid-template-columns: .72rem minmax(0, 1fr);
-    align-items: start;
-    gap: .65rem;
-    padding: .5rem 0;
-    border-top: 1px solid var(--rule);
-}
-
-.slip-dot {
-    display: block;
-    width: .53rem;
-    height: .53rem;
-    margin-top: .35rem;
-    border: 1.5px solid var(--olive);
-    border-radius: 50%;
-}
-
-.slip-steps li:first-child .slip-dot { background: var(--olive); }
-.slip-steps li:last-child .slip-dot { box-shadow: inset 0 0 0 1px var(--sheet); background: #a0a681; }
-.slip-steps strong, .slip-steps small { display: block; }
-.slip-steps strong { font-size: 1rem; line-height: 1.25; font-weight: 650; }
-.slip-steps small { margin-top: .1rem; color: var(--muted); font-size: .87rem; line-height: 1.35; }
 
 .portrait::after {
     content: "";
@@ -898,8 +844,7 @@ a:hover {
     letter-spacing: -.04em;
 }
 
-.prose > * + h2,
-.prose > .plate-mount {
+.prose > * + h2 {
     margin-top: 2.25rem;
 }
 
@@ -1035,7 +980,7 @@ a:hover {
     .site-nav a { font-size: .97rem; }
     .hero { padding-top: 2rem; }
     .plate-mount { padding: min(1.2rem, 5vw) min(1.1rem, 5vw) min(1.2rem, 5vw) min(1.4rem, 6vw); }
-    .workflow-plate { padding: min(1rem, 4.5vw); }
+    .sales-example { padding: min(1rem, 4.5vw); }
     .plate-mount::before { left: .5rem; }
     .resume-sheet { padding-inline: 1.05rem; }
 }
@@ -1061,7 +1006,7 @@ a:hover {
     .resume-sheet p, .resume-sheet ul { max-width: none; }
     .resume-sheet li + li { margin-top: .12rem; }
     .reading-grid { grid-template-columns: 1fr; gap: 1rem; padding-top: .75rem; }
-    .workflow-plate { box-shadow: none; }
+    .sales-example { box-shadow: none; }
     h1, h2, h3, .entry-period { break-after: avoid; }
     li, figure { break-inside: avoid; }
     p { widows: 2; orphans: 2; }
